@@ -1,0 +1,6 @@
+cloud:
+  aws:
+    s3:
+      bucket: veryveryhotbucket
+    region:
+      static: us-east-2
