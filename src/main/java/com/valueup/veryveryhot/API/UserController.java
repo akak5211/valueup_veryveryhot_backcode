@@ -4,7 +4,6 @@ import com.valueup.veryveryhot.Model.User;
 import com.valueup.veryveryhot.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RequestMapping("api/v1/user") //v1 빼니 오류 발생함
@@ -20,7 +19,7 @@ public class UserController {
     }
 
     //Get http methods controllers
-
+    
     @GetMapping
     public List<User> getAll(){
         return userService.getAllUsers();

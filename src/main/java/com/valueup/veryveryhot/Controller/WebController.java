@@ -1,7 +1,6 @@
-
 package com.valueup.veryveryhot.Controller;
-import java.io.IOException;
 
+import java.io.IOException;
 
 import com.valueup.veryveryhot.S3.S3Uploader;
 
@@ -21,10 +20,9 @@ public class WebController {
     private final S3Uploader s3Uploader;
 
     
-
-    @GetMapping("/")
+    @GetMapping("")
     public String index() {
-        return "index.html";
+        return "index";
     }
 
     @PostMapping("/upload")
