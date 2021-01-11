@@ -1,4 +1,4 @@
-package com.valueup.veryveryhot.API;
+package com.valueup.veryveryhot.Controller;
 
 import com.valueup.veryveryhot.Model.User;
 import com.valueup.veryveryhot.Service.UserService;
