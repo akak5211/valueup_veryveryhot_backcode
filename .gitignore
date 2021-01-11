@@ -17,7 +17,9 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+### AWS ###
 aws.yml
+src/main/resources/aws.properties
 
 ### IntelliJ IDEA ###
 .idea

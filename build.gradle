@@ -16,26 +16,29 @@ configurations {
 
 repositories {
 	mavenCentral()
-	maven { url 'https://repo.spring.io/libs-milestone'}
+	//maven { url 'https://repo.spring.io/libs-milestone'}
 }
 
 dependencies {
-	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
-	compile('org.springframework.cloud:spring-cloud-starter-aws')
+	//compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
+	//compile('org.springframework.cloud:spring-cloud-starter-aws')
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws', version: '2.2.1.RELEASE'
+	//compile 'com.amazonaws:aws-java-sdk-s3'
+	//compile group: 'com.amazonaws', name: 'aws-java-sdk-bom', version: '1.11.934', ext: 'pom'
 }
 
-dependencyManagement {
+/*dependencyManagement {
     imports {
         mavenBom 'org.springframework.cloud:spring-cloud-aws:2.0.0.RC2'
     }
 
-}
+}*/
 
 test {
 	useJUnitPlatform()
