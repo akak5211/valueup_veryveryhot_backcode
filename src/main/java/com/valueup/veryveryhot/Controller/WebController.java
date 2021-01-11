@@ -19,10 +19,9 @@ public class WebController {
 
     private final S3Uploader s3Uploader;
 
-    
-    @GetMapping("")
+    @GetMapping("/")
     public String index() {
-        return "index";
+        return "index.html";
     }
 
     @PostMapping("/upload")
