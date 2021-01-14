@@ -41,7 +41,7 @@ public class UserController {
 
     //Non-Get http method controllers
 
-    @RequestMapping(value = "api/v1/user", method = {RequestMethod.POST})
+    @RequestMapping(value = "api/v1/user/create", method = {RequestMethod.POST})
     @ResponseStatus(value=HttpStatus.OK)
         public User addUser(@RequestBody User user){
         return userService.addUser(user);
