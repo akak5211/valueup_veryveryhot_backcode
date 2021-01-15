@@ -47,7 +47,7 @@ public class UserController {
         return userService.addUser(user);
     }
 
-    @RequestMapping(value = "api/v1/user/delete{id}", method = {RequestMethod.DELETE})
+    @DeleteMapping(value = "api/v1/user/{id}")
     public void removeUser(@PathVariable String id){
         userService.removeUser(id);
     }
