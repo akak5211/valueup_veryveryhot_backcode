@@ -12,6 +12,15 @@ public class Bank{
     @Id
     private String id;
 
+    public Bank(@JsonProperty("parentid") String parentid, @JsonProperty("bankname") String bankname,
+    @JsonProperty("account") int account, @JsonProperty("payment") String payment){
+        this.parentid = parentid;
+        this.bankname = bankname;
+        this.account = account;
+        this.payment = payment;
+
+    }
+
     public String getParentid() {
         return this.parentid;
     }
@@ -31,21 +40,13 @@ public class Bank{
         return this.payment;
     }
 
-
     public String getId() {
         return this.id;
     }
 
 
 
-    public Bank(@JsonProperty("parentid") String parentid, @JsonProperty("bankname") String bankname,
-    @JsonProperty("account") int account, @JsonProperty("payment") String payment){
-        this.parentid = parentid;
-        this.bankname = bankname;
-        this.account = account;
-        this.payment = payment;
-
-    }
+    
 
     
 }
