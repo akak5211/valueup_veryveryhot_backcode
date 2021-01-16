@@ -13,6 +13,8 @@ public interface UserDAO {
 
     public User getUserByUserid(String userid);
 
+    public User getUserByUseridAndPassword(String userid, String password);
+
     public User addUser(User user);
 
     public User updateUser(User user);

@@ -33,6 +33,10 @@ public class UserService {
         return userDAO.getUserByUserid(userid);
     }
 
+    public User getUserByUseridAndPassword(String userid, String password) {
+        return userDAO.getUserByUseridAndPassword(userid, password);
+    }
+
     public User addUser(User user){
         return userDAO.addUser(user);
     }
