@@ -38,6 +38,11 @@ public class UserController {
     public User getById(@PathVariable("id") String id) {
         return userService.getUser(id);
     }
+    
+    @RequestMapping(value = "api/v1/userid/{userid}", method = {RequestMethod.GET})
+    public User getByUserid(@PathVariable("userid") String userid) {
+        return userService.getUserByUserid(userid);
+    }
 
     //Non-Get http method controllers
 

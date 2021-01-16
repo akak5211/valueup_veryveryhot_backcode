@@ -11,6 +11,8 @@ public interface UserDAO {
 
     public User getUserByName(String name);
 
+    public User getUserByUserid(String userid);
+
     public User addUser(User user);
 
     public User updateUser(User user);

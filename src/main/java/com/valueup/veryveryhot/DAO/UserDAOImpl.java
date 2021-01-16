@@ -40,6 +40,11 @@ public class UserDAOImpl implements UserDAO{
         return UserRepository.findByName(name);
     }
 
+    @Override
+    public User getUserByUserid(String userid) {
+        return UserRepository.findByUserid(userid);
+    }
+
 
     @Override
     public User updateUser(User newuser) {
