@@ -59,8 +59,8 @@ public class UserController {
     }
 
     @PostMapping("api/v1/user/login")
-    public User loginUser(@RequestBody User user) {
-        return userService.getUserByUseridAndPassword(user.getUserid(), user.getPassword());
+    public User loginUser(@RequestBody String userid, String password) {
+        return userService.getUserByUseridAndPassword(userid, password);
     }
 
 
