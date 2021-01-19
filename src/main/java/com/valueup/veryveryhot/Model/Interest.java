@@ -15,13 +15,7 @@ public class Interest {
         this.interestname = interestname;
         this.parentid = parentid;
     }
-
-    public Interest(String interestname, String parentid, String id) {
-        this.interestname = interestname;
-        this.parentid = parentid;
-        this.id = id;
-    }
-
+    
     public String getInterestname() {
         return this.interestname;
     }
