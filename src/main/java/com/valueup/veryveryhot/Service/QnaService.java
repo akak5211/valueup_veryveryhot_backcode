@@ -24,6 +24,7 @@ public class QnaService {
     public Qna getQna(String qna){
         return qnaDAO.getQnaById(qna);
     }
+    
     public Qna getQnaByQnatitle(String qnatitle){
         return qnaDAO.getQnaByQnatitle(qnatitle);
     }

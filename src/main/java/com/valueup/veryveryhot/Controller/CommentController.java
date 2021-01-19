@@ -1,0 +1,49 @@
+package com.valueup.veryveryhot.Controller;
+
+import java.util.List;
+
+import com.valueup.veryveryhot.Model.Comment;
+import com.valueup.veryveryhot.Service.CommentService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CommentController {
+
+    @Autowired
+    private final CommentService commentService;
+
+    public CommentController(CommentService commentService) {
+        this.commentService = commentService;
+    }
+
+    @RequestMapping(value = "api/v1/comment", method = {RequestMethod.GET})
+    public List<Comment> getAll(){
+    return commentService.getAllComment();
+    }
+    
+    @RequestMapping(value = "api/v1/comment/{id}", method = {RequestMethod.GET})
+    public Comment getById(@PathVariable("id") String id) {
+        return commentService.getComment(id);
+    }
+
+    @RequestMapping(value = "api/v1/comment/create", method = {RequestMethod.POST})
+    @ResponseStatus(value=HttpStatus.OK)
+        public Comment addComment(@RequestBody Comment comment){
+        return commentService.addComment(comment);  
+     }
+
+     @DeleteMapping(value = "api/v1/comment/delete/{id}")
+     public void removeComment(@PathVariable String id){
+         commentService.removeComment(id);
+     }
+
+}

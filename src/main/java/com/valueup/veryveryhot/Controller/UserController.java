@@ -62,6 +62,7 @@ public class UserController {
     public User loginUser(@RequestBody User user) {
         return userService.getUserByUseridAndPassword(user.getUserid(),user.getPassword());
     }
-    //TEST GIT2
+    
+    
 
 }
