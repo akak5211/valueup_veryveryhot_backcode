@@ -10,18 +10,20 @@ public class Card {
     private final String cardcategory;
     private final String cardcontent;
     private final String cardimageurl;
+    private final int cardpoint;
 
     @Id
     private String id;
 
     public Card(@JsonProperty("cardname") String cardname, @JsonProperty("cardcompany") String cardcompany, 
     @JsonProperty("cardcategory") String cardcategory, @JsonProperty("cardcontent") String cardcontent, 
-    @JsonProperty("cardimageurl") String cardimageurl) {
+    @JsonProperty("cardimageurl") String cardimageurl, @JsonProperty("cardpoint") int cardpoint) {
         this.cardname = cardname;
         this.cardcompany = cardcompany;
         this.cardcategory = cardcategory;
         this.cardcontent = cardcontent;
         this.cardimageurl = cardimageurl;
+        this.cardpoint = cardpoint;
     }
 
     public String getCardname() {
@@ -48,6 +50,9 @@ public class Card {
         return this.cardimageurl;
     }
 
+    public int getCardpoint() {
+        return this.cardpoint;
+    }
 
     public String getId() {
         return this.id;
