@@ -45,7 +45,7 @@ public class PaymentController {
         return paymentService.getPaymentByShopname(shopname);
     }
 
-    @PostMapping("api/v1/payment/add")
+    @PostMapping("api/v1/payment/create")
     @ResponseStatus(value=HttpStatus.OK)
         public Payment addPayment(@RequestBody Payment payment){
         return paymentService.addPayment(payment);
