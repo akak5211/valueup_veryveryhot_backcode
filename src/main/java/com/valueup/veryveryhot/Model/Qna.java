@@ -16,7 +16,7 @@ public class Qna{
     @Id
     private String id;
 
-    public Qna(@JsonProperty("qnatitle") String qnatitle, @JsonProperty("qnapeple") String qnapeople,
+    public Qna(@JsonProperty("qnatitle") String qnatitle, @JsonProperty("qnapeople") String qnapeople,
     @JsonProperty("qnacontent") String qnacontent, @JsonProperty("parentid") String parentid,
     @JsonProperty("likerate") int likerate, @JsonProperty("qnarate") int qnarate,
     @JsonProperty("qnadate") String qnadate) {
