@@ -30,8 +30,8 @@ public class QnaDAOImpl implements QnaDAO{
     }
 
     @Override
-    public Qna updateQna(Qna newqna) {
-        return QnaRepository.save(newqna);
+    public Qna updateQna(Qna qna) {
+        return QnaRepository.save(qna);
     }
 
     @Override
