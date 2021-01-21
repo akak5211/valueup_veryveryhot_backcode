@@ -38,6 +38,16 @@ public class EduController {
     public Edu getByName(@PathVariable("eduname") String eduname) {
         return eduService.getEduByName(eduname);
     }
+
+    @RequestMapping(value = "api/v1/edu/{eduurl}", method = {RequestMethod.GET})
+    public Edu getByUrl(@PathVariable("eduurl") String eduurl) {
+        return eduService.getEduByUrl(eduurl);
+    }
+
+    @RequestMapping(value = "api/v1/edu/{eduimgurl}", method = {RequestMethod.GET})
+    public Edu getByImgurl(@PathVariable("eduimgurl") String eduimgurl) {
+        return eduService.getEduByImgurl(eduimgurl);
+    }
     
     //Non-Get http method controllers
 

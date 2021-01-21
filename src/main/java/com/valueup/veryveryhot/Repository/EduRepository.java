@@ -8,6 +8,7 @@ public interface EduRepository extends MongoRepository<Edu, String> {
     public Edu findByEduname(String eduname);
     public Edu findByEduurl(String eduurl);
     public Edu findByEduage(String eduage);
+    public Edu findByEduimgurl(String eduimgurl);
 
     
 }

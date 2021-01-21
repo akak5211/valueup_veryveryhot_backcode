@@ -51,5 +51,6 @@ public class BankController {
     public void removeBank(@PathVariable String id){
         bankService.removeBank(id);
     }
+    
 
 }

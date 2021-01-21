@@ -50,6 +50,11 @@ public class EduDAOImpl implements EduDAO {
     }
 
     @Override
+    public Edu getEduByEduimgurl(String eduimgurl){
+        return EduRepository.findByEduimgurl(eduimgurl);
+    }
+
+    @Override
     public Edu updateEdu(Edu newedu) {
         return EduRepository.save(newedu);
     }

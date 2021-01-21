@@ -15,6 +15,8 @@ public interface EduDAO {
     public Edu getEduByEduurl(String eduurl);
 
     public Edu getEduByEduage(String eduage);
+
+    public Edu getEduByEduimgurl(String eduimgurl);
     
     public Edu addEdu(Edu edu);
 

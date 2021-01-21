@@ -2,6 +2,7 @@ package com.valueup.veryveryhot.Controller;
 
 import java.util.List;
 
+import com.amazonaws.services.kms.model.UpdateAliasRequest;
 import com.valueup.veryveryhot.Model.User;
 import com.valueup.veryveryhot.Service.UserService;
 
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -51,6 +53,12 @@ public class UserController {
     @ResponseStatus(value=HttpStatus.OK)
         public User addUser(@RequestBody User user){
         return userService.addUser(user);
+    }
+
+    @RequestMapping(value = "api/v1/user/update/{id}", method = {RequestMethod.PUT})
+    @ResponseStatus(value=HttpStatus.OK)
+    public User updateUser(@PathVariable(value = "id") String id, @RequestBody User user){
+            return userService.updateUser(user);
     }
 
     @DeleteMapping(value = "api/v1/user/delete/{id}")
