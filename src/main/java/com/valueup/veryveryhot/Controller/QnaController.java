@@ -41,6 +41,12 @@ public class QnaController {
         return qnaService.addQna(qna);  
      }
 
+    @RequestMapping(value = "api/v1/qna/update/{id}", method = {RequestMethod.PUT})
+    @ResponseStatus(value=HttpStatus.OK)
+    public Qna updateQna(@PathVariable(value = "id") String id, @RequestBody Qna qna){
+            return qnaService.updateQna(qna);
+    }
+
      @DeleteMapping(value = "api/v1/qna/delete/{id}")
      public void removeQna(@PathVariable String id){
          qnaService.removeQna(id);
