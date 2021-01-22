@@ -34,17 +34,17 @@ public class EduController {
         return eduService.getAllEdu();
     }
 
-    @RequestMapping(value = "api/v1/edu/{eduname}", method = {RequestMethod.GET})
+    @RequestMapping(value = "api/v1/edu/eduname/{eduname}", method = {RequestMethod.GET})
     public Edu getByName(@PathVariable("eduname") String eduname) {
         return eduService.getEduByName(eduname);
     }
 
-    @RequestMapping(value = "api/v1/edu/{eduurl}", method = {RequestMethod.GET})
+    @RequestMapping(value = "api/v1/edu/eduurl/{eduurl}", method = {RequestMethod.GET})
     public Edu getByUrl(@PathVariable("eduurl") String eduurl) {
         return eduService.getEduByUrl(eduurl);
     }
 
-    @RequestMapping(value = "api/v1/edu/{eduimgurl}", method = {RequestMethod.GET})
+    @RequestMapping(value = "api/v1/edu/eduimgurl/{eduimgurl}", method = {RequestMethod.GET})
     public Edu getByImgurl(@PathVariable("eduimgurl") String eduimgurl) {
         return eduService.getEduByImgurl(eduimgurl);
     }
