@@ -56,7 +56,7 @@ public class CommentDAOImpl implements CommentDAO{
         return CommentRepository.findByCommentdate(commentdate);  
     }
 
-    public Comment getCommentByParentid(String parentid){
+    public List<Comment> getCommentByParentid(String parentid){
         return CommentRepository.findByParentid(parentid);
     }
 }

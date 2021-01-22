@@ -37,7 +37,7 @@ public class CommentService {
         return commentDAO.getCommentByCommentdate(commentdate);
     }
 
-    public Comment getCommentByParentid(String parentid){
+    public List<Comment> getCommentByParentid(String parentid){
         return commentDAO.getCommentByParentid(parentid);
     }
 

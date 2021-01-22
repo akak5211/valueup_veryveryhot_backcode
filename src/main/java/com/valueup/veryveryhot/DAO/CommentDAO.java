@@ -16,7 +16,7 @@ public interface CommentDAO {
 
     public Comment getCommentByCommentdate(String commentdate);
 
-    public Comment getCommentByParentid(String parentid);
+    public List<Comment> getCommentByParentid(String parentid);
 
     public Comment addComment(Comment comment);
 
