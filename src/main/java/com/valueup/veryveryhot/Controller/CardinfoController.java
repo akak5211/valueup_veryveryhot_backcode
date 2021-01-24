@@ -37,12 +37,12 @@ public class CardinfoController {
     }
 
     @GetMapping("api/v1/cardinfo/company/{companyname}")
-    public Cardinfo getByCompanyname(@PathVariable("companyname") String companyname) {
+    public List<Cardinfo> getByCompanyname(@PathVariable("companyname") String companyname) {
         return cardinfoService.getCardinfoByCompanyname(companyname);
     }
     
     @GetMapping("api/v1/cardinfo/rewards/{rewards}")
-    public Cardinfo getByRewards(@PathVariable("rewards") List<String> rewards) {
+    public List<Cardinfo> getByRewards(@PathVariable("rewards") List<String> rewards) {
         return cardinfoService.getCardinfoByRewards(rewards);
     }
 

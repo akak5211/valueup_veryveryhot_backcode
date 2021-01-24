@@ -26,12 +26,12 @@ public class CardinfoService {
         return cardinfoDAO.getCardinfoById(id);
     }
 
-    public Cardinfo getCardinfoByCompanyname(String companyname){
+    public List<Cardinfo> getCardinfoByCompanyname(String companyname){
         return cardinfoDAO.getCardinfoByCompanyname(companyname);
     }
 
   
-    public Cardinfo getCardinfoByRewards(List<String> rewards) {
+    public List<Cardinfo> getCardinfoByRewards(List<String> rewards) {
         return cardinfoDAO.getCardinfoByRewards(rewards);
     }
     

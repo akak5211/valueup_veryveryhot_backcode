@@ -10,9 +10,9 @@ public interface CardinfoDAO {
 
     public Cardinfo getCardinfoById(String id);
 
-    public Cardinfo getCardinfoByCompanyname(String companyname);
+    public List<Cardinfo> getCardinfoByCompanyname(String companyname);
 
-    public Cardinfo getCardinfoByRewards(List<String> rewards);
+    public List<Cardinfo> getCardinfoByRewards(List<String> rewards);
 
     public Cardinfo addCardinfo(Cardinfo cardinfo);
 

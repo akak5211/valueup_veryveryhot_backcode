@@ -9,6 +9,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 
 public interface CardinfoRepository extends MongoRepository<Cardinfo, String> {
-    public Cardinfo findByCompanyname(String companyname);
-    public Cardinfo findByRewards(List<String> rewards);
+    public List<Cardinfo> findByCompanyname(String companyname);
+    public List<Cardinfo> findByRewards(List<String> rewards);
 }
