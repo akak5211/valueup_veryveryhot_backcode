@@ -43,7 +43,7 @@ public class CardinfoController {
     
     @GetMapping("api/v1/cardinfo/rewards/{rewards}")
     public List<Cardinfo> getByRewards(@PathVariable("rewards") List<String> rewards) {
-        return cardinfoService.getCardinfoByRewards(rewards);
+        return cardinfoService.getCardinfoByRewardsIn(rewards);
     }
 
   

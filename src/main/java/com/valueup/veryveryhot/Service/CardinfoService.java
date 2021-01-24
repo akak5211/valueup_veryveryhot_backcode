@@ -31,8 +31,8 @@ public class CardinfoService {
     }
 
   
-    public List<Cardinfo> getCardinfoByRewards(List<String> rewards) {
-        return cardinfoDAO.getCardinfoByRewards(rewards);
+    public List<Cardinfo> getCardinfoByRewardsIn(List<String> rewards) {
+        return cardinfoDAO.getCardinfoByRewardsIn(rewards);
     }
     
     
