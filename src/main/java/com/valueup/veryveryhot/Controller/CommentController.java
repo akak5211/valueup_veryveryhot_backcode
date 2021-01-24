@@ -55,7 +55,7 @@ public class CommentController {
 
     @PutMapping(value = "api/v1/comment/update/{id}")
     @ResponseStatus(value=HttpStatus.OK)
-    public Comment updaComment(@PathVariable(value = "id") String id, @RequestBody Comment comment){
+    public Comment updateComment(@PathVariable(value = "id") String id, @RequestBody Comment comment){
             return commentService.updateComment(comment);
     }
 
