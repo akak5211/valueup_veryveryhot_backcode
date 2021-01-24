@@ -14,8 +14,6 @@ public interface CardinfoDAO {
 
     public Cardinfo getCardinfoByRewards(List<String> rewards);
 
-    public Cardinfo getCardinfoByRewards_img(List<String> rewards_img);
-
     public Cardinfo addCardinfo(Cardinfo cardinfo);
 
     public Cardinfo updateCardinfo(Cardinfo cardinfo);

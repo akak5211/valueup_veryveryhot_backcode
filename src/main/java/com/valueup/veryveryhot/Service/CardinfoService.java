@@ -34,11 +34,6 @@ public class CardinfoService {
     public Cardinfo getCardinfoByRewards(List<String> rewards) {
         return cardinfoDAO.getCardinfoByRewards(rewards);
     }
-
-   
-    public Cardinfo getCardinfoByRewards_img(List<String> rewards_img) {
-        return cardinfoDAO.getCardinfoByRewards_img(rewards_img);
-    }
     
     
     public Cardinfo addCardinfo(Cardinfo cardinfo) {

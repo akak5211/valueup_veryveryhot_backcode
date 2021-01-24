@@ -11,7 +11,7 @@ public class Cardinfo {
     private final String name;
     private final String companyname;
     private final String img;
-    private final String anuual_free;
+    private final String annual_fee;
     private final String desc;
     private final List<String> rewards;
     private final List<String> rewards_img;
@@ -20,12 +20,12 @@ public class Cardinfo {
     private String id;
 
     public Cardinfo(@JsonProperty("name") String name, @JsonProperty("companyname") String companyname, @JsonProperty("img") String img,  
-    @JsonProperty("anuual_free") String anuual_free, @JsonProperty("desc") String desc, 
+    @JsonProperty("annual_fee") String annual_fee, @JsonProperty("desc") String desc, 
     @JsonProperty("rewards") List<String> rewards, @JsonProperty("rewards_img") List<String> rewards_img) {
         this.name = name;
         this.companyname = companyname;
         this.img = img;
-        this.anuual_free = anuual_free;
+        this.annual_fee = annual_fee;
         this.desc = desc;
         this.rewards = rewards;
         this.rewards_img = rewards_img;
@@ -48,8 +48,8 @@ public class Cardinfo {
     }
 
 
-    public String getAnuual_free() {
-        return this.anuual_free;
+    public String getAnnual_fee() {
+        return this.annual_fee;
     }
 
 

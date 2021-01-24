@@ -43,11 +43,6 @@ public class CardinfoDAOImpl implements CardinfoDAO {
     public Cardinfo getCardinfoByRewards(List<String> rewards) {
         return CardinfoRepository.findByRewards(rewards);
     }
-
-    @Override
-    public Cardinfo getCardinfoByRewards_img(List<String> rewards_img) {
-        return CardinfoRepository.findByRewards_img(rewards_img);
-    }
     
     @Override
     public Cardinfo addCardinfo(Cardinfo cardinfo) {
