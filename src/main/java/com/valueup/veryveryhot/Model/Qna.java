@@ -1,5 +1,7 @@
 package com.valueup.veryveryhot.Model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 
@@ -12,6 +14,7 @@ public class Qna{
     private final int likerate;
     private final int qnarate;
     private final String qnadate;
+    private final List<String> likepeople;
 
     @Id
     private String id;
@@ -19,7 +22,7 @@ public class Qna{
     public Qna(@JsonProperty("qnatitle") String qnatitle, @JsonProperty("qnapeople") String qnapeople,
     @JsonProperty("qnacontent") String qnacontent, @JsonProperty("parentid") String parentid,
     @JsonProperty("likerate") int likerate, @JsonProperty("qnarate") int qnarate,
-    @JsonProperty("qnadate") String qnadate) {
+    @JsonProperty("qnadate") String qnadate, @JsonProperty("likepeople") List<String> likepeople) {
         this.qnatitle = qnatitle;
         this.qnapeople = qnapeople;
         this.qnacontent = qnacontent;
@@ -27,6 +30,7 @@ public class Qna{
         this.likerate = likerate;
         this.qnarate = qnarate;
         this.qnadate = qnadate;
+        this.likepeople = likepeople;
         
     }
 
@@ -69,7 +73,9 @@ public class Qna{
         return this.id;
     }
 
-
+    public List<String> getLikepeople() {
+        return this.likepeople;
+    }
     
     
 }
