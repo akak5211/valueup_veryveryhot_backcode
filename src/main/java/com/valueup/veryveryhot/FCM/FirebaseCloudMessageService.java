@@ -1,4 +1,4 @@
-package com.valueup.veryveryhot.Service;
+package com.valueup.veryveryhot.FCM;
 
 import java.io.IOException;
 import java.util.List;
@@ -6,7 +6,6 @@ import java.util.List;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.auth.oauth2.GoogleCredentials;
-import com.valueup.veryveryhot.Firebase.FCMMessage;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpHeaders;
@@ -22,7 +21,7 @@ import okhttp3.Response;
 @Component
 @RequiredArgsConstructor
 public class FirebaseCloudMessageService {
-    private final String API_URL = "https://fcm.googleapis.com/v1/projects/tourcash-13092/messages:send";
+    private final String API_URL = "https://fcm.googleapis.com/v1/projects/first-82ce7/messages:send";
     private final ObjectMapper objectMapper;
 
     public void sendMessageTo(String targetToken, String title, String body) throws IOException {
