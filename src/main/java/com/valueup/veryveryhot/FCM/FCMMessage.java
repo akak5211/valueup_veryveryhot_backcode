@@ -1,4 +1,4 @@
-package com.valueup.veryveryhot.Firebase;
+package com.valueup.veryveryhot.FCM;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
