@@ -10,14 +10,14 @@ public class Edu {
     private final String eduurl;
     private final ArrayList<String> eduage;
     private final String eduimgurl;
-    private final String educategory;
+    private final ArrayList<String> educategory;
     
     @Id
     private String id;
 
     public Edu(@JsonProperty("eduname") String eduname, @JsonProperty("eduurl") String eduurl, 
     @JsonProperty("eduage") ArrayList<String> eduage, @JsonProperty("eduimgurl") String eduimgurl,
-    @JsonProperty("educategory") String educategory){
+    @JsonProperty("educategory") ArrayList<String> educategory){
         this.eduname = eduname;
         this.eduurl = eduurl;
         this.eduage = eduage;
@@ -47,7 +47,7 @@ public class Edu {
         return this.id;
     }
 
-    public String getEducategory() {
+    public ArrayList<String> getEducategory() {
         return this.educategory;
     }
    
