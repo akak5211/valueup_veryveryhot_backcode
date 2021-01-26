@@ -41,8 +41,8 @@ public class PaymentDAOImpl implements PaymentDAO{
     }
     
     @Override
-    public List<Payment> getPaymentByParentid(int parentid) {
-        return PaymentRepository.findByParentid(parentid);
+    public List<Payment> getPaymentByParentaccount(int parentaccount) {
+        return PaymentRepository.findByParentaccount(parentaccount);
     }
 
     @Override

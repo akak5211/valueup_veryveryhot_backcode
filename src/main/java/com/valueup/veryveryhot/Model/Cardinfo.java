@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 
 public class Cardinfo {
 
-    private final String name;
+    private final String name;  
     private final String companyname;
     private final String img;
     private final String annual_fee;

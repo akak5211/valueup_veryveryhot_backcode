@@ -13,7 +13,7 @@ public interface PaymentDAO {
 
     public List<Payment> getPaymentByShopname(String shopname);
 
-    public List<Payment> getPaymentByParentid(int parentid);
+    public List<Payment> getPaymentByParentaccount(int parentaccount);
 
     public Payment addPayment(Payment payment);
 

@@ -34,8 +34,8 @@ public class PaymentService {
         return paymentDAO.getPaymentByShopname(shopname);
     }
 
-    public List<Payment> getPaymentByParentid(int parentid) {
-        return paymentDAO.getPaymentByParentid(parentid);
+    public List<Payment> getPaymentByParentaccount(int parentaccount) {
+        return paymentDAO.getPaymentByParentaccount(parentaccount);
     }
 
     public Payment addPayment(Payment payment) {

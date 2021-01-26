@@ -9,6 +9,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 public interface PaymentRepository extends MongoRepository<Payment, String> {
     public List<Payment> findByCategory(String category);
     public List<Payment> findByShopname(String shopname);
-    public List<Payment> findByParentid(int parentid);
+    public List<Payment> findByParentaccount(int parentaccount);
 
 }

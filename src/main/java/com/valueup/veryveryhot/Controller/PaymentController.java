@@ -45,9 +45,9 @@ public class PaymentController {
         return paymentService.getPaymentByShopname(shopname);
     }
 
-    @GetMapping("api/v1/payment/parentid/{parentid}")
-    public List<Payment> getByParentid(@PathVariable("parentid") int parentid) {
-        return paymentService.getPaymentByParentid(parentid);
+    @GetMapping("api/v1/payment/parentaccount/{parentaccount}")
+    public List<Payment> getByParentaccount(@PathVariable("parentaccount") int parentaccount) {
+        return paymentService.getPaymentByParentaccount(parentaccount);
     }
 
     @PostMapping("api/v1/payment/create")
