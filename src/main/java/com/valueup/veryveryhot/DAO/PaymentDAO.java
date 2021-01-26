@@ -9,9 +9,11 @@ public interface PaymentDAO {
 
     public Payment getPaymentById(String id);
 
-    public Payment getPaymentByCategory(String category);
+    public List<Payment> getPaymentByCategory(String category);
 
-    public Payment getPaymentByShopname(String shopname);
+    public List<Payment> getPaymentByShopname(String shopname);
+
+    public List<Payment> getPaymentByParentid(int parentid);
 
     public Payment addPayment(Payment payment);
 

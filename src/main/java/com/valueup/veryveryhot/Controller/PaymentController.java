@@ -36,13 +36,18 @@ public class PaymentController {
     }
 
     @GetMapping("api/v1/payment/category/{category}")
-    public Payment getByCategory(@PathVariable("category") String category) {
+    public List<Payment> getByCategory(@PathVariable("category") String category) {
         return paymentService.getPaymentByCategory(category);
     }
     
     @GetMapping("api/v1/payment/shopname/{shopname}")
-    public Payment getByShopname(@PathVariable("shopname") String shopname) {
+    public List<Payment> getByShopname(@PathVariable("shopname") String shopname) {
         return paymentService.getPaymentByShopname(shopname);
+    }
+
+    @GetMapping("api/v1/payment/parentid/{parentid}")
+    public List<Payment> getByParentid(@PathVariable("parentid") int parentid) {
+        return paymentService.getPaymentByParentid(parentid);
     }
 
     @PostMapping("api/v1/payment/create")

@@ -26,12 +26,16 @@ public class PaymentService {
         return paymentDAO.getPaymentById(id);
     }
 
-    public Payment getPaymentByCategory(String category) {
+    public List<Payment> getPaymentByCategory(String category) {
         return paymentDAO.getPaymentByCategory(category);
     }
     
-    public Payment getPaymentByShopname(String shopname) {
+    public List<Payment> getPaymentByShopname(String shopname) {
         return paymentDAO.getPaymentByShopname(shopname);
+    }
+
+    public List<Payment> getPaymentByParentid(int parentid) {
+        return paymentDAO.getPaymentByParentid(parentid);
     }
 
     public Payment addPayment(Payment payment) {

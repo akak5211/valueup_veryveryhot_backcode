@@ -31,13 +31,18 @@ public class PaymentDAOImpl implements PaymentDAO{
     }
 
     @Override
-    public Payment getPaymentByCategory(String category) {
+    public List<Payment> getPaymentByCategory(String category) {
         return PaymentRepository.findByCategory(category);
     }
     
     @Override
-    public Payment getPaymentByShopname(String shopname) {
+    public List<Payment> getPaymentByShopname(String shopname) {
         return PaymentRepository.findByShopname(shopname);
+    }
+    
+    @Override
+    public List<Payment> getPaymentByParentid(int parentid) {
+        return PaymentRepository.findByParentid(parentid);
     }
 
     @Override
