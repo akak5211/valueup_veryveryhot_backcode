@@ -42,3 +42,4 @@ out/
 
 ### Firebase ###
 src/main/resources/firebase/firebase_service_key.json
+src/main/resources/firebase.properties
