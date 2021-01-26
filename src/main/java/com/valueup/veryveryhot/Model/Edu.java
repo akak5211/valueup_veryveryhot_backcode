@@ -1,12 +1,14 @@
 package com.valueup.veryveryhot.Model;
 
+import java.util.ArrayList;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 
 public class Edu {
     private final String eduname;
     private final String eduurl;
-    private final String eduage;
+    private final ArrayList<String> eduage;
     private final String eduimgurl;
     private final String educategory;
     
@@ -14,7 +16,7 @@ public class Edu {
     private String id;
 
     public Edu(@JsonProperty("eduname") String eduname, @JsonProperty("eduurl") String eduurl, 
-    @JsonProperty("eduage") String eduage, @JsonProperty("eduimgurl") String eduimgurl,
+    @JsonProperty("eduage") ArrayList<String> eduage, @JsonProperty("eduimgurl") String eduimgurl,
     @JsonProperty("educategory") String educategory){
         this.eduname = eduname;
         this.eduurl = eduurl;
@@ -33,7 +35,7 @@ public class Edu {
     }
 
 
-    public String getEduage() {
+    public ArrayList<String> getEduage() {
         return this.eduage;
     }
 

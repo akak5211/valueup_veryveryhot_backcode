@@ -1,8 +1,8 @@
 package com.valueup.veryveryhot.DAO;
 
-import com.valueup.veryveryhot.Model.Edu;
-
 import java.util.List;
+
+import com.valueup.veryveryhot.Model.Edu;
 
 public interface EduDAO {
 
@@ -14,10 +14,8 @@ public interface EduDAO {
 
     public Edu getEduByEduurl(String eduurl);
 
-    public Edu getEduByEduage(String eduage);
-
-    public Edu getEduByEduimgurl(String eduimgurl);
-
+    public List<Edu> getEduByEduage(String eduage);
+    
     public List<Edu> getEduByEducategory(String educategory);
     
     public Edu addEdu(Edu edu);

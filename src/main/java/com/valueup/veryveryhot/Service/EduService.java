@@ -1,11 +1,12 @@
 package com.valueup.veryveryhot.Service;
 
+import java.util.List;
+
 import com.valueup.veryveryhot.DAO.EduDAOImpl;
 import com.valueup.veryveryhot.Model.Edu;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class EduService {
@@ -33,12 +34,8 @@ public class EduService {
         return eduDAO.getEduByEduurl(eduurl);
     }
 
-    public Edu getEduByAge(String eduage){
+    public List<Edu> getEduByAge(String eduage){
         return eduDAO.getEduByEduage(eduage);
-    }
-
-    public Edu getEduByImgurl(String eduimgurl){
-        return eduDAO.getEduByEduimgurl(eduimgurl);
     }
 
     public List<Edu> getEduByEducategory(String educategory){

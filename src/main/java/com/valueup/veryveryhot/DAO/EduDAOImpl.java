@@ -46,13 +46,8 @@ public class EduDAOImpl implements EduDAO {
     }
 
     @Override
-    public Edu getEduByEduage(String eduage){
-        return EduRepository.findByEduage(eduage);
-    }
-
-    @Override
-    public Edu getEduByEduimgurl(String eduimgurl){
-        return EduRepository.findByEduimgurl(eduimgurl);
+    public List<Edu> getEduByEduage(String eduage){
+        return EduRepository.findByEduageIn(eduage);
     }
 
     @Override

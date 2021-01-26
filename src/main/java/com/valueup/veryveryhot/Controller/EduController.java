@@ -45,9 +45,10 @@ public class EduController {
         return eduService.getEduByUrl(eduurl);
     }
 
-    @RequestMapping(value = "api/v1/edu/eduimgurl/{eduimgurl}", method = {RequestMethod.GET})
-    public Edu getByImgurl(@PathVariable("eduimgurl") String eduimgurl) {
-        return eduService.getEduByImgurl(eduimgurl);
+
+    @GetMapping("api/v1/edu/eduage/{eduage}")
+    public List<Edu> getByEduage(@PathVariable("eduage") String eduage) {
+        return eduService.getEduByAge(eduage);
     }
 
     @GetMapping("api/v1/edu/educategory/{educategory}")
