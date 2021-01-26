@@ -64,6 +64,12 @@ public class EduController {
         return eduService.addEdu(edu);
     }
 
+    @RequestMapping(value = "api/v1/edu/update/{id}", method = {RequestMethod.PUT})
+    @ResponseStatus(value=HttpStatus.OK)
+    public Edu updateQna(@PathVariable(value = "id") String id, @RequestBody Edu edu){
+            return eduService.updateEdu(edu);
+    }
+
     @DeleteMapping(value = "api/v1/edu/delete/{id}")
     public void removeEdu(@PathVariable String id){
         eduService.removeEdu(id);
