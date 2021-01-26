@@ -41,6 +41,10 @@ public class EduService {
         return eduDAO.getEduByEduimgurl(eduimgurl);
     }
 
+    public List<Edu> getEduByEducategory(String educategory){
+        return eduDAO.getEduByEducategory(educategory);
+    }
+
     public Edu addEdu(Edu edu){
         return eduDAO.addEdu(edu);
     }

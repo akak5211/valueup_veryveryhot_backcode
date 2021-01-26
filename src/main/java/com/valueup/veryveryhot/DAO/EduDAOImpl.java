@@ -1,12 +1,13 @@
 package com.valueup.veryveryhot.DAO;
 
-import com.valueup.veryveryhot.Repository.EduRepository;
-import com.valueup.veryveryhot.Model.Edu;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
+
+import com.valueup.veryveryhot.Model.Edu;
+import com.valueup.veryveryhot.Repository.EduRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class EduDAOImpl implements EduDAO {
@@ -52,6 +53,11 @@ public class EduDAOImpl implements EduDAO {
     @Override
     public Edu getEduByEduimgurl(String eduimgurl){
         return EduRepository.findByEduimgurl(eduimgurl);
+    }
+
+    @Override
+    public List<Edu> getEduByEducategory(String educategory){
+        return EduRepository.findByEducategory(educategory);
     }
 
     @Override

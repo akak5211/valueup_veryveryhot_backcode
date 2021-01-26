@@ -8,6 +8,7 @@ import com.valueup.veryveryhot.Service.EduService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,6 +48,11 @@ public class EduController {
     @RequestMapping(value = "api/v1/edu/eduimgurl/{eduimgurl}", method = {RequestMethod.GET})
     public Edu getByImgurl(@PathVariable("eduimgurl") String eduimgurl) {
         return eduService.getEduByImgurl(eduimgurl);
+    }
+
+    @GetMapping("api/v1/edu/educategory/{educategory}")
+    public List<Edu> getByEducategory(@PathVariable("educategory") String educategory) {
+        return eduService.getEduByEducategory(educategory);
     }
     
     //Non-Get http method controllers
