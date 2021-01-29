@@ -9,7 +9,7 @@ public interface BankDAO{
 
     public Bank getBankById(String id);
 
-    public Bank getBankByParentid(String parentid);
+    public List<Bank> getBankByParentid(String parentid);
 
     public Bank addBank(Bank bank);
 

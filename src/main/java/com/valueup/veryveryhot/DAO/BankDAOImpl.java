@@ -35,7 +35,7 @@ public class BankDAOImpl implements BankDAO{
     }
 
     @Override
-    public Bank getBankByParentid(String parentid) {
+    public List<Bank> getBankByParentid(String parentid) {
         return BankRepository.findByParentid(parentid);
 
     }

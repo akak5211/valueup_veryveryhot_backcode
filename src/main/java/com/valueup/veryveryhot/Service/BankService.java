@@ -25,7 +25,7 @@ public class BankService {
         return bankDAO.getBankById(bank);
     }
 
-    public Bank getBankByParentid(String parentid){
+    public List<Bank> getBankByParentid(String parentid){
         return bankDAO.getBankByParentid(parentid);
     }
 

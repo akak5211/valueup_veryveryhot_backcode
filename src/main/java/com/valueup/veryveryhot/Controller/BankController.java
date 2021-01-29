@@ -35,7 +35,7 @@ public class BankController {
     }
 
     @RequestMapping(value = "api/v1/bankid/{parentid}", method = {RequestMethod.GET})
-    public Bank getByPatentid(@PathVariable("parentid") String parentid) {
+    public List<Bank> getByPatentid(@PathVariable("parentid") String parentid) {
         return bankService.getBankByParentid(parentid);
     }
     
