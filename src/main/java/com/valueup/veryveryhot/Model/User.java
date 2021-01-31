@@ -9,18 +9,20 @@ public class User {
     private final String password;
     private final String birthdate;
     private final String emailaddress;
+    private final String token;
     
     @Id
     private String id;
 
     public User(@JsonProperty("name") String name, @JsonProperty("userid") String userid, 
     @JsonProperty("password") String password, @JsonProperty("birthdate") String birthdate,
-    @JsonProperty("emailaddress") String emailaddress){
+    @JsonProperty("emailaddress") String emailaddress, @JsonProperty("token") String token){
         this.name = name;
         this.userid = userid;
         this.password = password;
         this.birthdate = birthdate;
         this.emailaddress = emailaddress;
+        this.token = token;
     }
 
     public String getName() {
@@ -47,6 +49,8 @@ public class User {
         return this.id;
     }
 
-
+    public String getToken() {
+        return this.token;
+    }
     
 }
