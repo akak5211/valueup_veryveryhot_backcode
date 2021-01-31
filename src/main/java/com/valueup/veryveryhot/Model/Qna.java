@@ -1,6 +1,6 @@
 package com.valueup.veryveryhot.Model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
@@ -14,7 +14,8 @@ public class Qna{
     private final int likerate;
     private final int qnarate;
     private final String qnadate;
-    private final ArrayList<String> likepeople;
+    private final List<String> likepeople;
+    private final List<String> commentpeople;
 
     @Id
     private String id;
@@ -22,7 +23,8 @@ public class Qna{
     public Qna(@JsonProperty("qnatitle") String qnatitle, @JsonProperty("qnapeople") String qnapeople,
     @JsonProperty("qnacontent") String qnacontent, @JsonProperty("parentid") String parentid,
     @JsonProperty("likerate") int likerate, @JsonProperty("qnarate") int qnarate,
-    @JsonProperty("qnadate") String qnadate, @JsonProperty("likepeople") ArrayList<String> likepeople) {
+    @JsonProperty("qnadate") String qnadate, @JsonProperty("likepeople") List<String> likepeople,
+    @JsonProperty("commentpeople") List<String> commentpeople) {
         this.qnatitle = qnatitle;
         this.qnapeople = qnapeople;
         this.qnacontent = qnacontent;
@@ -31,6 +33,7 @@ public class Qna{
         this.qnarate = qnarate;
         this.qnadate = qnadate;
         this.likepeople = likepeople;
+        this.commentpeople = commentpeople;
         
     }
 
@@ -73,9 +76,13 @@ public class Qna{
         return this.id;
     }
 
-    public ArrayList<String> getLikepeople() {
+    public List<String> getLikepeople() {
         return this.likepeople;
     }
     
     
+    public List<String> getCommentpeople() {
+        return this.commentpeople;
+    }
+
 }
