@@ -12,7 +12,7 @@ public interface CardinfoDAO {
 
     public List<Cardinfo> getCardinfoByCompanyname(String companyname);
 
-    public List<Cardinfo> getCardinfoByRewardsIn(List<String> rewards);
+    public List<Cardinfo> getCardinfoByRewardsIn(String rewards);
 
     public Cardinfo addCardinfo(Cardinfo cardinfo);
 

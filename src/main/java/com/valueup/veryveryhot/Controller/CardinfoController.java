@@ -42,7 +42,7 @@ public class CardinfoController {
     }
     
     @GetMapping("api/v1/cardinfo/rewards/{rewards}")
-    public List<Cardinfo> getByRewards(@PathVariable("rewards") List<String> rewards) {
+    public List<Cardinfo> getByRewards(@PathVariable("rewards") String rewards) {
         return cardinfoService.getCardinfoByRewardsIn(rewards);
     }
 
