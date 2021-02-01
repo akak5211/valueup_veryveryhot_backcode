@@ -1,5 +1,7 @@
 package com.valueup.veryveryhot.FCM;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,9 +9,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class AndroidPushPeriodicNotifications {
+public class AndroidPushNotifications {
 
-    public static String PeriodicNotificationJson(List<String> tokens, String qnatitle) throws JSONException {
+    public static String NewCommentNotificationJson(List<String> tokens, String qnatitle) throws JSONException {
 
         JSONObject body = new JSONObject();
 
@@ -28,8 +30,16 @@ public class AndroidPushPeriodicNotifications {
         body.put("registration_ids", array);
 
         JSONObject notification = new JSONObject();
-        notification.put("title","새로운 댓글이 달렸습니다.");
-        notification.put("body",qnatitle);
+        String title = "새로운 댓글이 달렸습니다.";
+        try{
+            title = URLEncoder.encode(title, "UTF-8");
+            qnatitle = URLEncoder.encode("글 제목:" + qnatitle, "UTF-8");
+            notification.put("title", title);
+            notification.put("body", qnatitle);
+
+        } catch (UnsupportedEncodingException e){
+            e.printStackTrace();
+        }
 
         body.put("notification", notification);
 

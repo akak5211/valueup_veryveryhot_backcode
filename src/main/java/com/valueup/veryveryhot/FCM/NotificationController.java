@@ -62,7 +62,7 @@ public class NotificationController {
             tokens.add(token);
         }
 
-        String notifications = AndroidPushPeriodicNotifications.PeriodicNotificationJson(tokens, qnatitle);
+        String notifications = AndroidPushNotifications.NewCommentNotificationJson(tokens, qnatitle);
 
         HttpEntity<String> request = new HttpEntity<>(notifications);
 
