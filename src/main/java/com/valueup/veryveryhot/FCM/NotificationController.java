@@ -2,6 +2,7 @@ package com.valueup.veryveryhot.FCM;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -37,8 +38,9 @@ public class NotificationController {
     QnaService qnaService;
 
     @PostMapping(value = "api/v1/fcm/send")
-    public @ResponseBody ResponseEntity<String> send(@RequestBody String qnaid) throws JSONException, InterruptedException {
+    public @ResponseBody ResponseEntity<String> send(@RequestBody HashMap<String, Object> paramInfo) throws JSONException, InterruptedException {
 
+        String qnaid = paramInfo.get("qnaid").toString();
         Qna qna = qnaService.getQna(qnaid);
         String qnatitle = qna.getQnatitle();
         List<String> likepeoplelist = new ArrayList<>();
