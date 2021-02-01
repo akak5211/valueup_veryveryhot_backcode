@@ -37,7 +37,7 @@ public class NotificationController {
     @Autowired
     QnaService qnaService;
 
-    @PostMapping(value = "api/v1/fcm/send")
+    @PostMapping(value = "api/v1/fcm/send", produces = "text/plain;charset=UTF-8")
     public @ResponseBody ResponseEntity<String> send(@RequestBody HashMap<String, Object> paramInfo) throws JSONException, InterruptedException {
 
         String qnaid = paramInfo.get("qnaid").toString();
