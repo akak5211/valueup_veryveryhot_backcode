@@ -18,7 +18,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,7 +37,7 @@ public class NotificationController {
     QnaService qnaService;
 
     @GetMapping(value = "api/v1/fcm/send")
-    public @ResponseBody ResponseEntity<String> send(@RequestParam ("qnaid") String qnaid) throws JSONException, InterruptedException {
+    public @ResponseBody ResponseEntity<String> send(@RequestBody String qnaid) throws JSONException, InterruptedException {
 
         Qna qna = qnaService.getQna(qnaid);
         String qnatitle = qna.getQnatitle();
