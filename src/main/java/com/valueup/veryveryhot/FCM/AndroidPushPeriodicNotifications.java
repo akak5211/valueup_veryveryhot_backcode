@@ -1,26 +1,22 @@
 package com.valueup.veryveryhot.FCM;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
 public class AndroidPushPeriodicNotifications {
 
-    public static String PeriodicNotificationJson() throws JSONException {
-        LocalDate localDate = LocalDate.now();
-
-        String sampleData[] = {""};
+    public static String PeriodicNotificationJson(List<String> tokens, String qnatitle) throws JSONException {
 
         JSONObject body = new JSONObject();
 
         List<String> tokenlist = new ArrayList<String>();
 
-        for(int i=0; i<sampleData.length; i++){
-            tokenlist.add(sampleData[i]);
+        for(int i=0; i<tokens.size(); i++){
+            tokenlist.add(tokens.get(i));
         }
 
         JSONArray array = new JSONArray();
@@ -32,8 +28,8 @@ public class AndroidPushPeriodicNotifications {
         body.put("registration_ids", array);
 
         JSONObject notification = new JSONObject();
-        notification.put("title","hello!");
-        notification.put("body","Today is "+localDate.getDayOfWeek().name()+"!");
+        notification.put("title","새로운 댓글이 달렸습니다.");
+        notification.put("body",qnatitle);
 
         body.put("notification", notification);
 

@@ -1,8 +1,14 @@
 package com.valueup.veryveryhot.FCM;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+
+import com.valueup.veryveryhot.Model.Qna;
+import com.valueup.veryveryhot.Service.QnaService;
+import com.valueup.veryveryhot.Service.UserService;
 
 import org.json.JSONException;
 import org.slf4j.Logger;
@@ -12,6 +18,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,9 +30,37 @@ public class NotificationController {
     @Autowired
     AndroidPushNotificationsService androidPushNotificationsService;
 
+    @Autowired
+    UserService userService;
+
+    @Autowired
+    QnaService qnaService;
+
     @GetMapping(value = "api/v1/fcm/send")
-    public @ResponseBody ResponseEntity<String> send() throws JSONException, InterruptedException  {
-        String notifications = AndroidPushPeriodicNotifications.PeriodicNotificationJson();
+    public @ResponseBody ResponseEntity<String> send(@RequestParam ("qnaid") String qnaid) throws JSONException, InterruptedException {
+
+        Qna qna = qnaService.getQna(qnaid);
+        String qnatitle = qna.getQnatitle();
+        List<String> likepeoplelist = new ArrayList<>();
+        List<String> commentpeoplelist = new ArrayList<>();
+        List<String> notificationpeoplelist = new ArrayList<>();
+
+        List<String> tokens = new ArrayList<>();
+
+        likepeoplelist = qna.getLikepeople();
+        commentpeoplelist = qna.getCommentpeople();
+        notificationpeoplelist.addAll(likepeoplelist);
+        for (int i = 0; i < commentpeoplelist.size(); i++){
+            if(!notificationpeoplelist.contains(commentpeoplelist.get(i))){
+                notificationpeoplelist.add(commentpeoplelist.get(i));
+            }
+        }
+        for (int i = 0; i <notificationpeoplelist.size(); i++){
+            String token = userService.getUserByName(notificationpeoplelist.get(i)).getToken();
+            tokens.add(token);
+        }
+
+        String notifications = AndroidPushPeriodicNotifications.PeriodicNotificationJson(tokens, qnatitle);
 
         HttpEntity<String> request = new HttpEntity<>(notifications);
 
