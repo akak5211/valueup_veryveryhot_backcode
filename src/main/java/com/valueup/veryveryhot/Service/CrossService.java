@@ -29,6 +29,10 @@ public class CrossService {
         return crossDAO.getCrossByCrossurl(crossurl);
     }
 
+    public Cross getCrossByImgurl(String imgurl){
+        return crossDAO.getCrossByImgurl(imgurl);
+    }
+
     public Cross addCross(Cross cross){
         return crossDAO.addCross(cross);
     }

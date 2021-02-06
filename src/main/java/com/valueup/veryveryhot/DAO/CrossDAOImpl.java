@@ -34,6 +34,11 @@ public class CrossDAOImpl implements CrossDAO{
     }
 
     @Override
+    public Cross getCrossByImgurl(String imgurl) {
+        return CrossRepository.findByImgurl(imgurl);
+    }
+
+    @Override
     public Cross getCrossById(String id) {
         Optional<Cross> Cross = CrossRepository.findById(id);
         return Cross.get();

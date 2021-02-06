@@ -11,6 +11,8 @@ public interface CrossDAO {
 
     public Cross getCrossByCrossurl(String crossurl);
 
+    public Cross getCrossByImgurl(String imgurl);
+
     public Cross addCross(Cross cross);
 
     public Cross updateCross(Cross cross);
