@@ -8,6 +8,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import com.valueup.veryveryhot.Model.Qna;
+import com.valueup.veryveryhot.Model.User;
 import com.valueup.veryveryhot.Service.QnaService;
 import com.valueup.veryveryhot.Service.UserService;
 
@@ -63,6 +64,45 @@ public class NotificationController {
         }
 
         String notifications = AndroidPushNotifications.NewCommentNotificationJson(tokens, qnatitle);
+
+        HttpEntity<String> request = new HttpEntity<>(notifications);
+
+        try{
+            CompletableFuture<String> pushNotification = androidPushNotificationsService.send(request);
+            CompletableFuture.allOf(pushNotification).join();
+    
+            String firebaseResponse = pushNotification.get();
+            return new ResponseEntity<>(firebaseResponse, HttpStatus.OK);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        catch (InterruptedException e){
+            logger.debug("got interrupted!");
+            throw new InterruptedException();
+        }
+        catch (ExecutionException e){
+            logger.debug("execution error!");
+        }
+
+        return new ResponseEntity<>("Push Notification ERROR!", HttpStatus.BAD_REQUEST);
+    }
+
+    @PostMapping(value = "api/v1/fcm/daily", produces = "text/plain;charset=UTF-8")
+    public @ResponseBody ResponseEntity<String> daily(@RequestBody HashMap<String, Object> paramInfo) throws JSONException, InterruptedException {
+
+        String newstitle = paramInfo.get("newstitle").toString();
+
+        List<String> tokens = new ArrayList<>();
+        List<User> users = new ArrayList<>();
+        users = userService.getAllUsers();
+
+        for (int i = 0; i <users.size(); i++){
+            String token = users.get(i).getToken();
+            tokens.add(token);
+        }
+
+        String notifications = AndroidPushNotifications.DailyNotificationJson(tokens, newstitle);
 
         HttpEntity<String> request = new HttpEntity<>(notifications);
 
