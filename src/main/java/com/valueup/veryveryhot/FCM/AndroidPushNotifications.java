@@ -47,4 +47,42 @@ public class AndroidPushNotifications {
 
         return body.toString();
     }
+
+    public static String DailyNotificationJson(List<String> tokens, String newstitle) throws JSONException {
+        JSONObject body = new JSONObject();
+
+        List<String> tokenlist = new ArrayList<String>();
+
+        for (int i = 0; i < tokens.size(); i++) {
+            tokenlist.add(tokens.get(i));
+        }
+
+        JSONArray array = new JSONArray();
+
+        for (int i = 0; i < tokenlist.size(); i++) {
+            array.put(tokenlist.get(i));
+        }
+
+        body.put("registration_ids", array);
+
+        JSONObject notification = new JSONObject();
+
+        String title = "오늘의 금융 상식";
+        try {
+            title = URLEncoder.encode(title, "UTF-8");
+            newstitle = URLEncoder.encode(newstitle, "UTF-8");
+            notification.put("title", title);
+            notification.put("body", newstitle);
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        body.put("notification", notification);
+
+        System.out.println(body.toString());
+
+        return body.toString();
+    }
+
 }
