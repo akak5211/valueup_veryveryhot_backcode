@@ -799,6 +799,8 @@ function ShowMessage(Feedback){
 //
 }
 
+
+
 function ShowElements(Show, TagName, ContainerToReverse){
 // added third argument to allow objects in the feedback box to appear
 //IE bug -- hide all the form elements that will show through the popup
@@ -1416,6 +1418,7 @@ function CheckAnswers(){
 		Output += Incorrect;
 		Penalties++;
 	}
+	alert(Output);
 
 	ShowMessage(Output);
 	WriteToInstructions(Output);
@@ -1442,8 +1445,6 @@ function TypeChars(Chars){
 		CurrentBox.value += Chars;
 	}
 }
-
-
 
 
 
@@ -1560,6 +1561,7 @@ function TypeChars(Chars){
 <!-- BeginSubmissionForm -->
 
 <!-- EndSubmissionForm -->
+
 
 </body>
 
