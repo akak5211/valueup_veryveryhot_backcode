@@ -85,4 +85,30 @@ public class AndroidPushNotifications {
         return body.toString();
     }
 
+    public static String BalanceNotificationJson(String token, String message) throws JSONException {
+        JSONObject body = new JSONObject();
+
+        body.put("to", token);
+
+        JSONObject notification = new JSONObject();
+
+        String title = "잔고를 확인하세요!";
+        try {
+            title = URLEncoder.encode(title, "UTF-8");
+            message = URLEncoder.encode(message, "UTF-8");
+            notification.put("title", title);
+            notification.put("body", message);
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        body.put("notification", notification);
+
+        System.out.println(body.toString());
+
+        return body.toString();
+    }
+
+
 }

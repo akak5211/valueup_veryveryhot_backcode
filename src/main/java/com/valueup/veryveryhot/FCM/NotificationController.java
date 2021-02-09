@@ -126,4 +126,37 @@ public class NotificationController {
 
         return new ResponseEntity<>("Push Notification ERROR!", HttpStatus.BAD_REQUEST);
     }
+
+    @PostMapping(value = "api/v1/fcm/balance", produces = "text/plain;charset=UTF-8")
+    public @ResponseBody ResponseEntity<String> balance(@RequestBody HashMap<String, Object> paramInfo) throws JSONException, InterruptedException {
+
+        String message = paramInfo.get("message").toString();
+        String id = paramInfo.get("userid").toString();
+
+        User user = userService.getUser(id);
+        String token = user.getToken();
+        String notifications = AndroidPushNotifications.BalanceNotificationJson(token, message);
+
+        HttpEntity<String> request = new HttpEntity<>(notifications);
+
+        try{
+            CompletableFuture<String> pushNotification = androidPushNotificationsService.send(request);
+            CompletableFuture.allOf(pushNotification).join();
+    
+            String firebaseResponse = pushNotification.get();
+            return new ResponseEntity<>(firebaseResponse, HttpStatus.OK);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        catch (InterruptedException e){
+            logger.debug("got interrupted!");
+            throw new InterruptedException();
+        }
+        catch (ExecutionException e){
+            logger.debug("execution error!");
+        }
+
+        return new ResponseEntity<>("Push Notification ERROR!", HttpStatus.BAD_REQUEST);
+    }
 }
