@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface CrossRepository extends MongoRepository<Cross, String> {
     
-    public Cross findByCrossurl(String crossurl);
-    public Cross findByImgurl(String imgurl);
+    public Cross findByScore(int score);
+    public Cross findByCategory(String category);
     
 }

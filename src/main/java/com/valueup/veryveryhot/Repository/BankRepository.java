@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 public interface BankRepository extends MongoRepository<Bank, String> {
     
     public List<Bank> findByParentid(String parentid);
+    public Bank findByBalance(int balance);
 
     
 }

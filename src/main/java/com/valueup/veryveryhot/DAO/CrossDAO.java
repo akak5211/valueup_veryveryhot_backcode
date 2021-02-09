@@ -9,9 +9,9 @@ public interface CrossDAO {
 
     public Cross getCrossById(String id);
 
-    public Cross getCrossByCrossurl(String crossurl);
+    public Cross getCrossByScore(int score);
 
-    public Cross getCrossByImgurl(String imgurl);
+    public Cross getCrossByCategory(String category);
 
     public Cross addCross(Cross cross);
 

@@ -29,13 +29,13 @@ public class CrossDAOImpl implements CrossDAO{
     }
 
     @Override
-    public Cross getCrossByCrossurl(String crossurl) {
-        return CrossRepository.findByCrossurl(crossurl);
+    public Cross getCrossByScore(int score) {
+        return CrossRepository.findByScore(score);
     }
 
     @Override
-    public Cross getCrossByImgurl(String imgurl) {
-        return CrossRepository.findByImgurl(imgurl);
+    public Cross getCrossByCategory(String category) {
+        return CrossRepository.findByCategory(category);
     }
 
     @Override

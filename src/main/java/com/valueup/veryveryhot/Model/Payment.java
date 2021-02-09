@@ -8,19 +8,19 @@ public class Payment {
     private final String category;
     private final String shopname;
     private final int amount;
-    private final int balance;
+    
     private final int parentaccount;
 
     @Id
     private String id;
 
     public Payment(@JsonProperty("category") String category, @JsonProperty("shopname") String shopname,
-    @JsonProperty("amount") int amount, @JsonProperty("balance") int balance,
+    @JsonProperty("amount") int amount, 
     @JsonProperty("parentaccount") int parentaccount) {
         this.category = category;
         this.shopname = shopname;
         this.amount = amount;
-        this.balance = balance;
+       
         this.parentaccount = parentaccount;
 
     }
@@ -37,10 +37,7 @@ public class Payment {
         return this.amount;
     }
 
-    public int getBalance() {
-        return this.balance;
-    }
-
+   
     public String getId() {
         return this.id;
     }

@@ -25,12 +25,12 @@ public class CrossService {
         return crossDAO.getCrossById(cross);
     }
 
-    public Cross getCrossByCrossurl(String crossurl){
-        return crossDAO.getCrossByCrossurl(crossurl);
+    public Cross getCrossByScore(int score){
+        return crossDAO.getCrossByScore(score);
     }
 
-    public Cross getCrossByImgurl(String imgurl){
-        return crossDAO.getCrossByImgurl(imgurl);
+    public Cross getCrossByCategory(String category){
+        return crossDAO.getCrossByCategory(category);
     }
 
     public Cross addCross(Cross cross){

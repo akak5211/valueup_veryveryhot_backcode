@@ -11,6 +11,8 @@ public interface BankDAO{
 
     public List<Bank> getBankByParentid(String parentid);
 
+    public Bank getBankByBalance(int balance);
+
     public Bank addBank(Bank bank);
 
     public Bank updateBank(Bank bank);

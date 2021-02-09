@@ -33,7 +33,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws', version: '2.2.5.RELEASE'
-	compile('org.springframework.boot:spring-boot-starter-thymeleaf') //크로스워드 
+	
 	//compile 'com.amazonaws:aws-java-sdk-s3'
 	//compile group: 'com.amazonaws', name: 'aws-java-sdk-bom', version: '1.11.934', ext: 'pom'
 }

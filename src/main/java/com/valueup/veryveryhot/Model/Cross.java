@@ -5,25 +5,25 @@ import org.springframework.data.annotation.Id;
 
 
 public class Cross {
-    private final String crossurl;
-    private final String imgurl;
+    private final int score;
+    private final String category;
 
 
     @Id
     private String id;
 
 
-    public Cross(@JsonProperty("crossurl") String crossurl, @JsonProperty("imgurl") String imgurl){
-        this.crossurl = crossurl;
-        this.imgurl = imgurl;
+    public Cross(@JsonProperty("score") int score, @JsonProperty("category") String category){
+        this.score = score;
+        this.category = category;
     }
 
-    public String getCrossurl(){
-        return this.crossurl;
+    public int getScore(){
+        return this.score;
     }
 
-    public String getImgurl(){
-        return this.imgurl;
+    public String getCategory(){
+        return this.category;
     }
 
     public String getId(){

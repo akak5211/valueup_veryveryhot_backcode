@@ -7,15 +7,17 @@ public class Bank{
     private final String parentid;
     private final String bankname;
     private final int account;
+    private final int balance;
 
     @Id
     private String id;
 
-    public Bank(@JsonProperty("parentid") String parentid, @JsonProperty("bankname") String bankname,
+    public Bank(@JsonProperty("parentid") String parentid, @JsonProperty("bankname") String bankname, @JsonProperty("balance") int balance,
     @JsonProperty("account") int account){
         this.parentid = parentid;
         this.bankname = bankname;
         this.account = account;
+        this.balance = balance;
     }
 
     public String getParentid() {
@@ -30,6 +32,10 @@ public class Bank{
 
     public int getAccount() {
         return this.account;
+    }
+
+    public int getBalance(){
+        return this.balance;
     }
 
     public String getId() {

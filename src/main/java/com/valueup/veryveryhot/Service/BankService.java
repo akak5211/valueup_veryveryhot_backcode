@@ -1,5 +1,6 @@
 package com.valueup.veryveryhot.Service;
 
+import com.valueup.veryveryhot.DAO.BankDAO;
 import com.valueup.veryveryhot.DAO.BankDAOImpl;
 import com.valueup.veryveryhot.Model.Bank;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,9 @@ public class BankService {
         return bankDAO.getBankByParentid(parentid);
     }
 
+    public Bank getBankByBalance(int balance){
+        return bankDAO.getBankByBalance(balance);
+    }
 
     public Bank addBank(Bank bank){
         return bankDAO.addBank(bank);
