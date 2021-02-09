@@ -772,7 +772,10 @@ function FocusAButton(){
 }
 
 
-
+function ShowScore(Feedbacl){
+	var Sc = Feedbacl
+	alert(Sc)
+}
 
 //CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
 
@@ -1418,8 +1421,8 @@ function CheckAnswers(){
 		Output += Incorrect;
 		Penalties++;
 	}
-	alert(Output);
 
+	ShowScore(Score);
 	ShowMessage(Output);
 	WriteToInstructions(Output);
 	
