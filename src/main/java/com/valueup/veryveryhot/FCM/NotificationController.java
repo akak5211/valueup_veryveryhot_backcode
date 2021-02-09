@@ -42,6 +42,8 @@ public class NotificationController {
     public @ResponseBody ResponseEntity<String> send(@RequestBody HashMap<String, Object> paramInfo) throws JSONException, InterruptedException {
 
         String qnaid = paramInfo.get("qnaid").toString();
+        String writerid = paramInfo.get("writerid").toString();
+        String commenterid = paramInfo.get("commenterid").toString();
         Qna qna = qnaService.getQna(qnaid);
         String qnatitle = qna.getQnatitle();
         List<String> likepeoplelist = new ArrayList<>();
@@ -58,6 +60,15 @@ public class NotificationController {
                 notificationpeoplelist.add(commentpeoplelist.get(i));
             }
         }
+
+        if(!notificationpeoplelist.contains(writerid)){
+            notificationpeoplelist.add(writerid);
+        }
+
+        if(notificationpeoplelist.contains(commenterid)){
+            notificationpeoplelist.remove(commenterid);
+        }
+
         for (int i = 0; i <notificationpeoplelist.size(); i++){
             String token = userService.getUserByUserid(notificationpeoplelist.get(i)).getToken();
             tokens.add(token);
