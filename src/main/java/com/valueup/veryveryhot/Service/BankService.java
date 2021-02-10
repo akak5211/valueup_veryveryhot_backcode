@@ -1,12 +1,12 @@
 package com.valueup.veryveryhot.Service;
 
-import com.valueup.veryveryhot.DAO.BankDAO;
+import java.util.List;
+
 import com.valueup.veryveryhot.DAO.BankDAOImpl;
 import com.valueup.veryveryhot.Model.Bank;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class BankService {

@@ -641,8 +641,11 @@ div.CardStyleCentered{
 
 
 </style>
+<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+
 
 <script>
+	
 
 //<![CDATA[
 
@@ -772,9 +775,37 @@ function FocusAButton(){
 }
 
 
-function ShowScore(Feedbacl){
+	// function SendData(Score) {
+	// 	var form = {
+	// 		name: "이용힉",
+	// 		userid: "yonghik",
+	// 		password: "1234",
+	// 		birthdate: "19971115",
+	// 		emailaddress: "baeseongkyu@babo.com",
+	// 		token: ""
+	// 	};
+
+	// 	$.ajax({
+	// 		url: "ajaxtest",
+	// 		method: "post",
+	// 		type: "json",
+	// 		contentType: "application/json",
+	// 		data: JSON.stringify(form),
+	// 		success: function (data) {
+	// 			console.log(data);
+	// 			return data;
+	// 		},
+	// 		error: function () {
+	// 			console.log("호출 실패");
+	// 			alert("stringify err");
+	// 		}
+
+	// 	});
+	// }
+
+function SendScore(Feedbacl){
 	var Sc = Feedbacl
-	alert(Sc)
+	window.AndroidApp.receiveString(String(Sc))
 }
 
 //CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
@@ -1422,7 +1453,7 @@ function CheckAnswers(){
 		Penalties++;
 	}
 
-	ShowScore(Score);
+	SendScore(Score);
 	ShowMessage(Output);
 	WriteToInstructions(Output);
 	
