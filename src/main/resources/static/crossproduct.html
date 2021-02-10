@@ -805,7 +805,8 @@ function FocusAButton(){
 
 function SendScore(Feedbacl){
 	var Sc = Feedbacl
-	window.AndroidApp.receiveString(String(Sc))
+	var Category = "일반상식"
+	window.AndroidApp.receiveString(String(Sc), Category)
 }
 
 //CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
