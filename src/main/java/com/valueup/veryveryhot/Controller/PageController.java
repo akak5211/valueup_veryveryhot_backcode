@@ -20,51 +20,51 @@ public class PageController {
     }
     @RequestMapping("page3")
     public String page3() {
-         return "세금.htm";
+         return "page3";
     }
     @RequestMapping("page4")
     public String page4() {
-         return "신용.htm";
+         return "page4";
     }
     @RequestMapping("page5")
     public String page5() {
-         return "연금.htm";
+         return "page5";
     }
     @RequestMapping("page6")
     public String page6() {
-         return "증권.htm";
+         return "page6";
     }
     @RequestMapping("page7")
     public String page7() {
-         return "카드.htm";
+         return "page7";
     }
     @RequestMapping("page8")
     public String page8() {
-         return "펀드.htm";
+         return "page8";
     }
     @RequestMapping("page9")
     public String page9() {
-         return "일반상식1.htm";
+         return "page9";
     }
     @RequestMapping("page10")
     public String page10() {
-         return "일반상식2.htm";
+         return "page10";
     }
     @RequestMapping("page11")
     public String page11() {
-         return "일반상식3.htm";
+         return "page11";
     }
     @RequestMapping("page12")
     public String page12() {
-         return "세계경제.htm";
+         return "page12";
     }
     @RequestMapping("page13")
     public String page13() {
-         return "대출.htm";
+         return "page13";
     }
     @RequestMapping("page14")
     public String page14() {
-         return "저축.htm";
+         return "page14";
     }
 
 
