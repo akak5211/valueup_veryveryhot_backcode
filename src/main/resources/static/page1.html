@@ -8,7 +8,6 @@
 
 
 <title>
-	
 
 </title>
 
@@ -16,7 +15,7 @@
 
 <!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
 
-
+hot
 
 <style>
 
@@ -355,12 +354,12 @@ table.CrosswordGrid{
 }
 
 table.CrosswordGrid tbody tr td{
-	width: 1.5em;
-	height: 1.5em;
+	width: 2.4em;
+	height: 2.4em;
 	text-align: center;
 	vertical-align: middle;
-	font-size: 140%;
-	padding: 1px;
+	font-size: 120%;
+	padding: 0px;
 	margin: 0px;
 	border-style: solid;
 	border-width: 1px;
@@ -382,12 +381,12 @@ table.CrosswordGrid td.LetterOnlyCell{
 	vertical-align: middle;
 	background-color: #ffffff;
 	color: #000000;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 table.CrosswordGrid td.NumLetterCell{
 	text-align: left;
-	vertical-align: top;
+	vertical-align: middle;
 	background-color: #ffffff;
 	color: #000000;
 	padding: 1px;
@@ -641,14 +640,10 @@ div.CardStyleCentered{
 
 
 </style>
-<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
-
 
 <script>
-	
 
 //<![CDATA[
-
 
 
 
@@ -775,39 +770,7 @@ function FocusAButton(){
 }
 
 
-	// function SendData(Score) {
-	// 	var form = {
-	// 		name: "이용힉",
-	// 		userid: "yonghik",
-	// 		password: "1234",
-	// 		birthdate: "19971115",
-	// 		emailaddress: "baeseongkyu@babo.com",
-	// 		token: ""
-	// 	};
 
-	// 	$.ajax({
-	// 		url: "ajaxtest",
-	// 		method: "post",
-	// 		type: "json",
-	// 		contentType: "application/json",
-	// 		data: JSON.stringify(form),
-	// 		success: function (data) {
-	// 			console.log(data);
-	// 			return data;
-	// 		},
-	// 		error: function () {
-	// 			console.log("호출 실패");
-	// 			alert("stringify err");
-	// 		}
-
-	// 	});
-	// }
-
-function SendScore(Feedbacl){
-	var Sc = Feedbacl
-	var Category = "금융상품" //문제별로 카테고리 작성
-	window.AndroidApp.receiveString(String(Sc), Category) // 점수/카테고리 안드로이드로 넘겨주는 부분
-}
 
 //CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
 
@@ -833,8 +796,6 @@ function ShowMessage(Feedback){
 	
 //
 }
-
-
 
 function ShowElements(Show, TagName, ContainerToReverse){
 // added third argument to allow objects in the feedback box to appear
@@ -1438,8 +1399,8 @@ function CheckAnswers(){
 
 	Score = Math.floor(((CorrectLetters-Penalties) * 100)/TotLetters);
 	if (Score < 0){Score = 0;}
-
-	
+	var Category = "금융상품" //문제별로 카테고리 작성
+	window.AndroidApp.receiveString(String(Score), Category)
 
 //Compile the output
 	var Output = '';
@@ -1454,7 +1415,6 @@ function CheckAnswers(){
 		Penalties++;
 	}
 
-	SendScore(Score);
 	ShowMessage(Output);
 	WriteToInstructions(Output);
 	
@@ -1486,10 +1446,11 @@ function TypeChars(Chars){
 
 
 
+
+
 //-->
 
 //]]>
-
 
 </script>
 
@@ -1553,7 +1514,7 @@ function TypeChars(Chars){
 
 <table class="ClueList">
 <tbody id="CluesAcross">
-<tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesAcrossLabel">Across:</h3></td></tr>
+<tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesAcrossLabel">&#xAC00;&#xB85C;:</h3></td></tr>
 
 <tr><td class="ClueNum">5. </td><td id="Clue_A_5" class="Clue">&#xD55C;&#xAD6D;&#xC8FC;&#xD0DD;&#xC740;&#xD589;&#xBC95;&#xC5D0; &#xC758;&#xD558;&#xC5EC; &#xC124;&#xB9BD;&#xB41C; &#xD55C;&#xAD6D;&#xC8FC;&#xD0DD;&#xC740;&#xD589;&#xACFC; &#xC7AC;&#xBB34;&#xBD80;&#xC7A5;&#xAD00;&#xC774; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xAE08;&#xC735;&#xAE30;&#xAD00;&#xC5D0;&#xC11C; &#xCDE8;&#xAE09;&#xD558;&#xB294; &#xC800;&#xCD95;(&#xC2DC;&#xD589;&#xADDC;&#xCE59;&#xC5D0;&#xC11C; &#xC815;&#xD568;)&#xC744; &#xB9D0;&#xD568;.</td></tr><tr><td class="ClueNum">6. </td><td id="Clue_A_6" class="Clue">&#xAE08;&#xC735;&#xC0AC;&#xAC00; &#xBCF4;&#xC720;&#xD55C; &#xCC44;&#xAD8C;&#xC744; &#xACE0;&#xAC1D;&#xC5D0;&#xAC8C; &#xC778;&#xB3C4;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C;, &#xAD6D;&#xACF5;&#xCC44;, &#xC6B0;&#xB7C9;&#xD68C;&#xC0AC;&#xCC44; &#xB4F1;&#xC5D0; &#xD22C;&#xC790;&#xD558;&#xC5EC; &#xC57D;&#xC815; &#xC218;&#xC775;&#xB960;&#xC5D0; &#xB530;&#xB77C; &#xC774;&#xC790;&#xC9C0;&#xAE09;. (&#xD655;&#xC815;&#xAE08;&#xB9AC;&#xD615;) &#xC804;&#xCCB4; CMA &#xC0C1;&#xD488;&#xC758; 70~80% &#xCC28;&#xC9C0;&#xD560; &#xC815;&#xB3C4;&#xB85C; &#xC120;&#xD638;&#xB3C4;&#xAC00; &#xB192;&#xC740; &#xD1B5;&#xC7A5;.</td></tr><tr><td class="ClueNum">8. </td><td id="Clue_A_8" class="Clue">&#xCF5C;&#xC774;&#xB098; &#xAE30;&#xC5C5;&#xC5B4;&#xC74C;, &#xC591;&#xB3C4;&#xC131;&#xC608;&#xAE08;&#xC99D;&#xC11C;&#xC640; &#xAC19;&#xC740; &#xB2E8;&#xAE30;&#xCC44;&#xAD8C;&#xC5D0; &#xC9D1;&#xC911; &#xD22C;&#xC790;&#xD558;&#xC5EC; &#xC5BB;&#xC740; &#xC218;&#xC775;&#xC744; &#xB3CC;&#xB824;&#xC8FC;&#xB294; &#xCD08;&#xB2E8;&#xAE30; &#xC218;&#xC2DC;&#xC785;&#xCD9C;&#xC2DD; &#xC2E0;&#xD0C1;&#xC0C1;&#xD488;. &#xC740;&#xD589;&#xAC04; &#xBC1C;&#xD589;&#xC5B4;&#xC74C;&#xC774;&#xB098; &#xCD08;&#xB2E8;&#xAE30; &#xC790;&#xAE08;&#xAC70;&#xB798;&#xB85C; &#xC6B4;&#xC6A9;&#xB418;&#xBBC0;&#xB85C; &#xC548;&#xC815;&#xC131;&#xC774; &#xB6F0;&#xC5B4;&#xB09C; &#xC810;&#xC774; &#xC7A5;&#xC810;. CMA&#xC640; MMF&#xC758; &#xC77C;&#xBD80; &#xC7A5;&#xC810;&#xC744; &#xD569;&#xCE5C; &#xC0C1;&#xD488;</td></tr><tr><td class="ClueNum">11. </td><td id="Clue_A_11" class="Clue">&#xAD6D;&#xAC00;&#xAC00; &#xBC1C;&#xD589;&#xD558;&#xB294; &#xCC44;&#xAD8C;&#xC73C;&#xB85C; &#xAD6D;&#xCC44;&#xAD00;&#xB9AC;&#xAE30;&#xAE08;&#xCC44;&#xAD8C;, &#xAD6D;&#xBBFC;&#xC8FC;&#xD0DD;&#xCC44;&#xAD8C;, &#xC678;&#xAD6D;&#xD658;&#xD3C9;&#xD615;&#xAE30;&#xAE08;&#xCC44;&#xAD8C;&#xB4F1;&#xC774; &#xC788;&#xB2E4;.</td></tr><tr><td class="ClueNum">12. </td><td id="Clue_A_12" class="Clue">&#xB192;&#xC740; &#xBC30;&#xB2F9;&#xC744; &#xC9C0;&#xAE09;&#xD558;&#xB294; &#xAE30;&#xC5C5;&#xC5D0; &#xD22C;&#xC790;&#xD558;&#xB294; &#xC8FC;&#xC2DD;&#xD615; &#xD380;&#xB4DC;&#xC774;&#xB2E4;. &#xC6B4;&#xC6A9; &#xC2DC;&#xC791; &#xD6C4; &#xC608;&#xC0C1;&#xD55C; &#xBC30;&#xB2F9;&#xC218;&#xC775;&#xB960; &#xC774;&#xC0C1;&#xC73C;&#xB85C; &#xC8FC;&#xAC00;&#xAC00; &#xC0C1;&#xC2B9;&#xD558;&#xBA74; &#xC8FC;&#xC2DD;&#xC744; &#xD314;&#xC544; &#xC2DC;&#xC138; &#xCC28;&#xC775;&#xC744; &#xC5BB;&#xACE0;, &#xBC18;&#xB300;&#xB85C; &#xC8FC;&#xAC00;&#xAC00; &#xC624;&#xB974;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xBC30;&#xB2F9; &#xC2DC;&#xC810;&#xAE4C;&#xC9C0; &#xC8FC;&#xC2DD;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;&#xAC00; &#xC608;&#xC0C1;&#xBC30;&#xB2F9;&#xAE08;&#xC744; &#xD68D;&#xB4DD;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xC8FC;&#xAC00; &#xD558;&#xB77D;&#xC5D0; &#xB530;&#xB978; &#xC790;&#xBCF8; &#xC190;&#xC2E4;&#xC744; &#xB9CC;&#xD68C;&#xD558;&#xB294; &#xD380;&#xB4DC;&#xC774;&#xB2E4;. </td></tr><tr><td class="ClueNum">15. </td><td id="Clue_A_15" class="Clue">&#xC0AC;&#xB78C;&#xC774; &#xC8FD;&#xC74C;&#xC73C;&#xB85C;&#xC11C; &#xCD08;&#xB798;&#xB418;&#xB294; &#xC7AC;&#xC815; &#xC190;&#xC2E4;&#xC5D0; &#xB300;&#xD55C; &#xBCF4;&#xD638;&#xB9C9;&#xC785;&#xB2C8;&#xB2E4;. &#xBCF4;&#xD5D8;&#xAC00;&#xC785;&#xC790;&#xB294; &#xBCF4;&#xD5D8;&#xC0AC;&#xC5D0; &#xBCF4;&#xD5D8;&#xB8CC;&#xB97C; &#xB0A9;&#xC785;&#xD558;&#xACE0;, &#xBCF4;&#xD5D8;&#xC0AC;&#xB294; &#xADF8; &#xB300;&#xAC00;&#xB85C; &#xBCF4;&#xD5D8;&#xAC00;&#xC785;&#xC790;&#xAC00; &#xC8FD;&#xC5C8;&#xC744; &#xB54C; &#xBCF4;&#xD5D8;&#xC218;&#xC775;&#xC790;&#xC5D0;&#xAC8C; &#xBCF4;&#xD5D8;&#xAE08;&#xC744; &#xC9C0;&#xAE09;&#xD569;&#xB2C8;&#xB2E4;.</td></tr><tr><td class="ClueNum">18. </td><td id="Clue_A_18" class="Clue">&#xB9E4;&#xC6D4; &#xC77C;&#xC815;&#xC561;&#xC744; &#xB0A9;&#xC785;&#xD558;&#xBA74; 45&#xC138;&#xBD80;&#xD130; &#xC5F0;&#xAE08;&#xC73C;&#xB85C; &#xB3CC;&#xB824;&#xBC1B;&#xC744; &#xC218; &#xC788;&#xB294; &#xC0DD;&#xBA85;&#xBCF4;&#xD5D8; &#xC0C1;&#xD488;&#xC774;&#xB2E4;. &#xD1F4;&#xC9C1; &#xD6C4; &#xC18C;&#xB4DD; &#xACF5;&#xBC31;&#xC744; &#xBA54;&#xC6B0;&#xACE0; &#xB178;&#xD6C4; &#xC0DD;&#xACC4;&#xB97C; &#xC9C0;&#xD0A4;&#xB294; &#xBC84;&#xD300;&#xBAA9;&#xC744; &#xB9C8;&#xB828;&#xD558;&#xAE30; &#xC704;&#xD574; &#xAC00;&#xC785;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</td></tr><tr><td class="ClueNum">20. </td><td id="Clue_A_20" class="Clue">&#xC99D;&#xAD8C;&#xC0AC;&#xAC00; &#xAC1C;&#xC778; &#xC704;&#xD0C1;&#xC790;&#xB85C;&#xBD80;&#xD130; &#xAE08;&#xC735;&#xD22C;&#xC790;&#xC0C1;&#xD488;&#xC758; &#xB9E4;&#xB9E4;&#xAC70;&#xB798;&#xB97C; &#xC218;&#xD0C1;&#xD558;&#xB294; &#xACBD;&#xC6B0; &#xC608;&#xD0C1; &#xBC1B;&#xC544;&#xC57C; &#xD558;&#xB294; &#xC77C;&#xC815;&#xAE08;&#xC561; &#xC774;&#xC0C1;&#xC758; &#xD604;&#xAE08; &#xB610;&#xB294; &#xB300;&#xC6A9;&#xC99D;&#xAD8C;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.</td></tr><tr><td class="ClueNum">21. </td><td id="Clue_A_21" class="Clue">&#xAE08;&#xC735;&#xC0AC;&#xAC00; &#xC218;&#xC775;&#xC99D;&#xAD8C;, CP, CD &#xB4F1;&#xC73C;&#xB85C; &#xC6B4;&#xC601;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C;, &#xD655;&#xC815;&#xAE08;&#xB9AC;&#xD615;&#xC774; &#xC544;&#xB2CC; &#xC2E4;&#xC801;&#xBC30;&#xB2F9;&#xC73C;&#xB85C; &#xC218;&#xC775;&#xB960;&#xC5D0; &#xB530;&#xB77C; &#xC774;&#xC790;&#xC9C0;&#xAE09;.</td></tr><tr><td class="ClueNum">23. </td><td id="Clue_A_23" class="Clue">&#xD569;, &#xD569;&#xBA85;, &#xD569;&#xC790;, &#xC720;&#xD55C;&#xD68C;&#xC0AC; &#xB4F1; &#xC8FC;&#xC2DD;&#xD68C;&#xC0AC; &#xC774;&#xC678;&#xC758; &#xAE30;&#xC5C5;&#xC5D0; &#xC790;&#xBCF8;&#xCD9C;&#xC790;&#xB97C; &#xD55C; &#xAC83;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. &#xD615;&#xC2DD;&#xC801;&#xC73C;&#xB85C; &#xD22C;&#xD558;&#xC790;&#xBCF8;&#xC774; &#xC99D;&#xAD8C;&#xD654;&#xB418;&#xC5B4; &#xC788;&#xC9C0;; &#xC54A;&#xC744; &#xBFD0; &#xC8FC;&#xC2DD;&#xD22C;&#xC790;&#xC640; &#xAC19;&#xB2E4;.</td></tr><tr><td class="ClueNum">24. </td><td id="Clue_A_24" class="Clue">&#xC608;&#xAE08;&#xC790;&#xAC00; &#xBBF8;&#xB9AC; &#xC57D;&#xC815;&#xB41C; &#xAE30;&#xAC04;&#xC774; &#xACBD;&#xACFC;&#xD55C; &#xD6C4;&#xC5D0; &#xD604;&#xAE08;&#xC744; &#xC778;&#xCD9C;&#xD560; &#xAC83;&#xC744; &#xC57D;&#xC815;&#xD558;&#xBA74;&#xC11C; &#xC77C;&#xC815; &#xAE08;&#xC561;&#xC744; &#xC740;&#xD589;&#xC5D0; &#xC608;&#xCE58;&#xD558;&#xACE0;, &#xC740;&#xD589;&#xC740; &#xC774;&#xC5D0; &#xB300;&#xD574; &#xC77C;&#xC815; &#xC774;&#xC728;&#xC758; &#xC774;&#xC790;&#xB97C; &#xC9C0;&#xAE09;&#xD560; &#xAC83;&#xC744; &#xC57D;&#xC18D;&#xD558;&#xB294; &#xC608;&#xAE08;&#xC744; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;. </td></tr><tr><td class="ClueNum">26. </td><td id="Clue_A_26" class="Clue">&#xD68C;&#xC0AC;&#xAC00; &#xC0C1;&#xAC70;&#xB798;&#xB97C; &#xD1B5;&#xD574; &#xBC1B;&#xC740; &#xC5B4;&#xC74C;&#xC774;&#xB098; &#xC678;&#xC0C1;&#xB9E4;&#xCD9C;&#xCC44;&#xAD8C;&#xC744; &#xAE08;&#xC735;&#xAE30;&#xAD00;&#xC774; &#xB9E4;&#xC785;&#xD558;&#xC5EC; &#xC774;&#xB97C; &#xADFC;&#xAC70;&#xB85C; &#xBC1C;&#xD589;&#xD558;&#xB294; &#xC5B4;&#xC74C;&#xC73C;&#xB85C;, &#xD45C;&#xC9C0;&#xC5B4;&#xC74C;&#xC758; &#xC9C0;&#xAE09;&#xC778;&#xC740; &#xCD5C;&#xCD08; &#xC5B4;&#xC74C;&#xC744; &#xBC1C;&#xC0DD;&#xD55C; &#xD68C;&#xC0AC;&#xAC00; &#xC544;&#xB2C8;&#xB77C; &#xD45C;&#xC9C0;&#xC5B4;&#xC74C;&#xC744; &#xD310;&#xB9E4;&#xD55C; &#xAE08;&#xC735;&#xAE30;&#xAD00;&#xC774;&#xB2E4;.</td></tr><tr><td class="ClueNum">28. </td><td id="Clue_A_28" class="Clue">&#xD2B9;&#xC218;&#xCC44;&#xC911; &#xBC1C;&#xD589;&#xC8FC;&#xCCB4;&#xAC00; &#xAE08;&#xC735;&#xAE30;&#xAD00;&#xC778; &#xCC44;&#xAD8C;&#xC73C;&#xB85C; &#xC0B0;&#xC5C5;&#xAE08;&#xC735;&#xCC44;, &#xC7A5;&#xAE30;&#xC2E0;&#xC6A9;&#xCC44;, &#xC911;&#xC18C;&#xAE30;&#xC5C5;&#xAE08;&#xC735;&#xCC44;&#xB4F1;&#xC774; &#xC788;&#xB2E4;.</td></tr><tr><td class="ClueNum">29. </td><td id="Clue_A_29" class="Clue">&#xAE30;&#xC5C5;&#xC774; &#xB9DD;&#xD588;&#xC744; &#xACBD;&#xC6B0; &#xC120;&#xC21C;&#xC704;&#xCC44;&#xAD8C;&#xC744; &#xB2E4; &#xAC1A;&#xACE0;&#xB3C4; &#xB3C8;&#xC774; &#xB0A8;&#xC558;&#xC744; &#xB54C; &#xADF8; &#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xB3C8;&#xC744; &#xAC1A;&#xC544;&#xB3C4; &#xB418;&#xB294; &#xCC44;&#xAD8C;&#xC744; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;.</td></tr>
 
@@ -1566,7 +1527,7 @@ function TypeChars(Chars){
 
 <table class="ClueList">
 <tbody id="CluesDown">
-<tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesDownLabel">Down:</h3></td></tr>
+<tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesDownLabel">&#xC138;&#xB85C;:</h3></td></tr>
 
 <tr><td class="ClueNum">1. </td><td id="Clue_D_1" class="Clue">&#xC790;&#xC0B0;&#xC6B4;&#xC6A9;&#xC0AC;&#xAC00; &#xB2E8;&#xAE30;&#xAD6D;&#xACF5;&#xCC44;, CP, CD &#xB4F1;&#xC5D0; &#xD22C;&#xC790;&#xD558;&#xC5EC; &#xC6B4;&#xC601;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C;, &#xD655;&#xC815;&#xC774;&#xC790;&#xAC00; &#xC544;&#xB2CC; &#xC6B4;&#xC6A9;&#xACB0;&#xACFC;&#xC5D0; &#xC758;&#xD574; &#xC774;&#xC790;&#xC9C0;&#xAE09;.</td></tr><tr><td class="ClueNum">2. </td><td id="Clue_D_2" class="Clue">&#xADFC;&#xB85C;&#xC790;&#xC7AC;&#xC0B0;&#xD615;&#xC131;&#xC800;&#xCD95;&#xC758; &#xC57D;&#xC790;&#xB85C; &#xBE44;&#xACFC;&#xC138;&#xC640; &#xB192;&#xC740; &#xAE08;&#xB9AC;, &#xC18C;&#xB4DD;&#xACF5;&#xC81C; &#xB4F1;&#xC758; &#xD61C;&#xD0DD;&#xC774; &#xC788;&#xB294; &#xC0C1;&#xD488;&#xC785;&#xB2C8;&#xB2E4;. &#xC911;&#xC0B0;&#xCE35; &#xC7AC;&#xC0B0; &#xD615;&#xC131;&#xC744; &#xB3D5;&#xAE30; &#xC704;&#xD574; &#xAD6D;&#xAC00;&#xAC00; &#xAE08;&#xB9AC; &#xBC0F; &#xC138;&#xC81C; &#xD61C;&#xD0DD;&#xC744; &#xC9C0;&#xC6CC;&#xD558;&#xB294; &#xC81C;&#xB3C4;&#xB97C; &#xB9D0;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">3. </td><td id="Clue_D_3" class="Clue">&#xC8FC;&#xC2DD;&#xD68C;&#xC0AC;&#xAC00; &#xBC1C;&#xD589;&#xD558;&#xB294; &#xCC44;&#xAD8C;&#xC73C;&#xB85C; &#xBCF4;&#xC99D;&#xC0AC;&#xCC44;, &#xBB34;&#xBCF4;&#xC99D;&#xC0AC;&#xCC44;, &#xC2E0;&#xC885;&#xC0AC;&#xCC44;&#xB4F1;&#xC774; &#xC788;&#xB2E4;.</td></tr><tr><td class="ClueNum">4. </td><td id="Clue_D_4" class="Clue">&#xAE30;&#xAC04;&#xC744; &#xC815;&#xD558;&#xACE0;, &#xAE08;&#xC735;&#xAE30;&#xAD00;&#xC5D0; &#xC77C;&#xC815;&#xD55C; &#xAE08;&#xC561;&#xC744; &#xC608;&#xC785;&#xD558;&#xC5EC;<br />&#xB9CC;&#xAE30;&#xC77C;&#xC5D0; &#xC6D0;&#xAE08;&#xACFC; &#xC774;&#xC790;&#xB97C; &#xD568;&#xAED8; &#xCC3E;&#xB294; &#xC608;&#xAE08;.<br /></td></tr><tr><td class="ClueNum">7. </td><td id="Clue_D_7" class="Clue">&#xD380;&#xB4DC;&#xC7AC;&#xC0B0;(&#xC9D1;&#xD569;&#xD22C;&#xC790;&#xC7AC;&#xC0B0;)&#xC758; 50%&#xB97C; &#xCD08;&#xACFC;&#xD558;&#xC5EC; "&#xBD80;&#xB3D9;&#xC0B0;, &#xBD80;&#xB3D9;&#xC0B0;&#xAD00;&#xB828;&#xAD8C;&#xB9AC;. &#xBD80;&#xB3D9;&#xC0B0;&#xAD00;&#xB828;&#xC790;&#xC0B0;"&#xC5D0; &#xD22C;&#xC790;&#xD558;&#xACE0; &#xADF8; &#xACB0;&#xACFC;&#xB85C; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC774;&#xC775;&#xC744; &#xD22C;&#xC790;&#xC790;&#xC5D0;&#xAC8C; &#xBC30;&#xB2F9;&#xD558;&#xB294; &#xC0C1;&#xD488;&#xC785;&#xB2C8;&#xB2E4;..</td></tr><tr><td class="ClueNum">9. </td><td id="Clue_D_9" class="Clue">&#xD2B9;&#xBCC4;&#xBC95;&#xC5D0; &#xC758;&#xD558;&#xC5EC; &#xC124;&#xB9BD;&#xB41C; &#xBC95;&#xC778;&#xC774; &#xBC1C;&#xD589;&#xD55C; &#xCC44;&#xAD8C;&#xC73C;&#xB85C; &#xD1A0;&#xC9C0;&#xAC1C;&#xBC1C;&#xCC44;, &#xC804;&#xB825;&#xACF5;&#xC0AC;&#xCC44;&#xB4F1;&#xC774; &#xC788;&#xB2E4;.</td></tr><tr><td class="ClueNum">10. </td><td id="Clue_D_10" class="Clue">&#xB9CC; 18&#xC138; &#xC774;&#xC0C1;&#xC774;&#xBA74; &#xAC00;&#xC785;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xACE0; &#xB9CC;&#xAE30;&#xAC00; 40&#xC138; &#xC774;&#xC0C1;&#xC774;&#xAC70;&#xB098; &#xCD5C;&#xC800; 5&#xB144; &#xC774;&#xC0C1;&#xC758; &#xB178;&#xD6C4;&#xB300;&#xBE44;&#xC6A9; &#xC0C1;&#xD488;&#xC73C;&#xB85C; &#xD310;&#xB9E4;&#xB418;&#xB294; &#xC2E4;&#xC801;&#xBC30;&#xB2F9;&#xD615; &#xC5F0;&#xAE08; &#xC0C1;&#xD488;&#xC774;&#xB2E4;.</td></tr><tr><td class="ClueNum">13. </td><td id="Clue_D_13" class="Clue">&#xC8FC;&#xD0DD;&#xB9C8;&#xB828;&#xC744; &#xC704;&#xD55C; &#xC0C1;&#xD488;&#xC73C;&#xB85C; &#xC804;&#xC6A9;&#xBA74;&#xC801; 85&#xB610;&#xB294; &#xACF5;&#xACF5;&#xC8FC;&#xD0DD; &#xB610;&#xB294; &#xBBFC;&#xC601;&#xC8FC;&#xD0DD;&#xC744; &#xAE30;&#xC900;&#xD558;&#xC5EC; &#xB530;&#xB85C; &#xAC00;&#xC785;&#xD574;&#xC57C;&#xD588;&#xB358; &#xCCAD;&#xC57D;&#xC800;&#xCD95;&#xACFC; &#xCCAD;&#xC57D;&#xC608;&#xAE08;, &#xADF8;&#xB9AC;&#xACE0; &#xCCAD;&#xC57D;&#xBD80;&#xAE08; &#xC800;&#xCD95; &#xC0C1;&#xD488;&#xC744; &#xD558;&#xB098;&#xB85C; &#xD1B5;&#xD569;&#xD55C; &#xC0C1;&#xD488;&#xC785;&#xB2C8;&#xB2E4;.</td></tr><tr><td class="ClueNum">14. </td><td id="Clue_D_14" class="Clue">&#xC2DC;&#xC911;&#xC740;&#xD589;&#xC5D0;&#xC11C; &#xBC1C;&#xD589;&#xD558;&#xB294; &#xBB34;&#xAE30;&#xBA85; &#xD560;&#xC778;&#xC2DD; &#xD615;&#xC2DD;&#xC758; &#xC591;&#xB3C4;&#xAC00; &#xC790;&#xC720;&#xB85C;&#xC6B4; &#xC99D;&#xC11C;&#xB85C;<br />&#xBB34;&#xAE30;&#xBA85;&#xC774;&#xB77C; &#xAE08;&#xC735;&#xC2E4;&#xBA85;&#xC81C; &#xC801;&#xC6A9;&#xC744; &#xBC1B;&#xC9C0; &#xC54A;&#xC74C;. &#xCD5C;&#xC18C; 30&#xC77C; &#xC774;&#xC0C1; &#xC18C;&#xC720;&#xD558;&#xC5EC;&#xC57C; &#xC591;&#xB3C4;&#xAC00; &#xAC00;&#xB2A5;&#xD55C; &#xAE08;&#xC735;&#xC0C1;&#xD488;. &#xBAA9;&#xB3C8;&#xC744; &#xB2E8;&#xAE30;&#xC5D0; &#xC6B4;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xC0C1;&#xD488;.</td></tr><tr><td class="ClueNum">16. </td><td id="Clue_D_16" class="Clue">&#xD589;&#xC5D0;&#xC11C; &#xAC00;&#xC785; &#xAC00;&#xB2A5;&#xD55C; &#xC2E4;&#xC138;&#xAE08;&#xB9AC;&#xAC00; &#xC801;&#xC6A9;&#xB418;&#xB294; &#xD655;&#xC815;&#xAE08;&#xB9AC;&#xD615; &#xC0C1;&#xD488;. &#xC785;&#xCD9C;&#xAE08;&#xC774; &#xC790;&#xC720;&#xB86D;&#xACE0; &#xAC01;&#xC885; &#xC790;&#xB3D9;&#xC774;&#xCCB4;&#xB098; &#xACF5;&#xACFC;&#xAE08; &#xC774;&#xCCB4;, &#xACB0;&#xC7AC;&#xAE30;&#xB2A5;&#xC774; &#xAC00;&#xB2A5;&#xD55C; &#xB2E8;&#xAE30;&#xAE08;&#xC735;&#xC0C1;&#xD488;.</td></tr><tr><td class="ClueNum">17. </td><td id="Clue_D_17" class="Clue">&#xD2B9;&#xC815;&#xAE30;&#xAC04;&#xB3D9;&#xC548; &#xB9E4;&#xC77C; &#xB610;&#xB294; &#xB9E4;&#xC6D4; &#xC77C;&#xC815;&#xD55C; &#xAE08;&#xC561;&#xC744; &#xC608;&#xC785;&#xD558;&#xC5EC; &#xB9CC;&#xAE30;&#xC77C;&#xC5D0; &#xC6D0;&#xAE08;&#xACFC; &#xC774;&#xC790;&#xB97C; &#xD568;&#xAED8; &#xCC3E;&#xB294; &#xC608;&#xAE08;.</td></tr><tr><td class="ClueNum">19. </td><td id="Clue_D_19" class="Clue">&#xC785;&#xB300;&#xC0C1;, &#xC608;&#xCE58;&#xAE08;&#xC561;, &#xC608;&#xCE58;&#xAE30;&#xAC04;, &#xC785;&#xCD9C;&#xAE08; &#xD69F;&#xC218; &#xB4F1;&#xC5D0; &#xC544;&#xBB34;&#xB7F0; &#xC81C;&#xD55C;&#xC5C6;&#xC774; &#xC790;&#xC720;&#xB86D;&#xAC8C; &#xAC70;&#xB798;&#xD560; &#xC218; &#xC788;&#xB294; &#xC608;&#xAE08;&#xC73C;&#xB85C; &#xC740;&#xD589;&#xC774; &#xC800;&#xB9AC;&#xB85C; &#xC790;&#xAE08;&#xC744; &#xC870;&#xB2EC;&#xD560; &#xC218; &#xC788;&#xB294; &#xC608;&#xAE08;&#xC744; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;.</td></tr><tr><td class="ClueNum">22. </td><td id="Clue_D_22" class="Clue">&#xC885;&#xAE08;&#xC0AC; &#xB4F1; &#xAE08;&#xC735;&#xAE30;&#xAD00;&#xC774; &#xC790;&#xCCB4;&#xC790;&#xAE08;&#xC744; &#xC870;&#xB2EC;&#xD558;&#xAE30; &#xC704;&#xD558;&#xC5EC;&#xACE0;&#xAC1D;&#xC744; &#xC218;&#xCDE8;&#xC778;&#xC73C;&#xB85C; &#xD558;&#xACE0; &#xC885;&#xAE08;&#xC0AC;&#xAC00; &#xC9C0;&#xAE09;&#xC778;&#xC73C;&#xB85C; &#xD558;&#xC5EC; &#xBC1C;&#xD589;, &#xAD50;&#xBD80;&#xD558;&#xB294; &#xC57D;&#xC18D;&#xC5B4;&#xC74C; &#xD615;&#xD0DC;&#xC758; &#xAE08;&#xC735;&#xC0C1;&#xD488;.</td></tr><tr><td class="ClueNum">25. </td><td id="Clue_D_25" class="Clue">&#xC794;&#xC874;&#xAE30;&#xAC04;&#xC774; &#xC9E7;&#xC740; &#xCC44;&#xAD8C;. &#xD22C;&#xC790;&#xAE30;&#xAC04;&#xC774; &#xB2E4;&#xC591;&#xD558;&#xBBC0;&#xB85C;(&#xC794;&#xC874;&#xAE30;&#xAC04;&#xC758; &#xC0C1;&#xC774;&#xD568;) &#xC790;&#xC2E0;&#xC758; &#xD22C;&#xC790;&#xAE30;&#xAC04;&#xC744; &#xC815;&#xD55C; &#xD6C4;, &#xC99D;&#xAD8C;&#xC0AC;&#xC5D0; &#xBB38;&#xC758;&#xD558;&#xC5EC; &#xD22C;&#xC790;&#xD558;&#xB294;&#xAC83;&#xC774; &#xBC14;&#xB78C;&#xC9C1;&#xD558;&#xB2E4;.</td></tr><tr><td class="ClueNum">27. </td><td id="Clue_D_27" class="Clue">&#xC9C0;&#xBC29;&#xC790;&#xCE58;&#xB2E8;&#xCCB4;&#xC5D0;&#xC11C; &#xBC1C;&#xD589;&#xD558;&#xB294; &#xCC44;&#xAD8C;&#xC73C;&#xB85C; &#xB3C4;&#xC2DC;&#xCCA0;&#xB3C4;&#xCC44;&#xAD8C;,&#xC0C1;&#xC218;&#xB3C4;&#xACF5;&#xCC44;&#xB4F1;&#xC774; &#xC788;&#xB2E4;.</td></tr>
 
@@ -1596,7 +1557,6 @@ function TypeChars(Chars){
 <!-- BeginSubmissionForm -->
 
 <!-- EndSubmissionForm -->
-
 
 </body>
 

@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to baeseongkyu."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="baeseongkyu" />
+<meta name="dc:creator" content="rrr" />
+
+
+
+<title>
+
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       ��������;
+	--strFontSize:       medium;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #ffffff;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 2.4em;
+	height: 2.4em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 120%;
+	padding: 0px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+
+
+//MDH_SCORM modification to support SCORM 1.2 functionality on LMS
+/* JavaScript to find the SCORM API if it is available */
+/* Based on a model at <http://www.claroline.net/doc/en/index.php/How_do_I_create_SCORM_content%3F> */
+
+var API = null; /* SCORM API */
+
+/* look up through the frameset hierarchy for the SCORM API */
+function findAPI(win)
+{
+	while ((win.API == null) && (win.parent != null) && (win.parent != win))
+	{
+		win = win.parent;
+	}
+	API = win.API;
+}
+
+/* initialize the SCORM API */
+function initAPI(win)
+{
+	/* look for the SCORM API up in the frameset */
+	findAPI(win);
+
+	/* if we still have not found the API, look at the opener and its frameset */
+	if ((API == null) && (win.opener != null))
+	{
+		findAPI(win.opener);
+	}
+}
+
+var ScormSubmitted = false; //use this to check whether LMSFinish has been called later.
+
+function ScormStartUp(){
+	initAPI(window);
+	if (API != null){
+		API.LMSInitialize(''); 
+		API.LMSSetValue('cmi.core.lesson_status', 'browsed');
+		API.LMSSetValue('cmi.core.score.min', 0);
+		API.LMSSetValue('cmi.core.score.max', 100);
+		API.LMSCommit('');
+	}
+}
+
+function CheckLMSFinish(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			API.LMSCommit('');
+			API.LMSFinish('');
+			ScormSubmitted = true;
+		}
+	}
+}
+
+function SetScormIncomplete(){
+	if (ScormSubmitted == true){
+		return;
+	}
+	SetScormScore();
+	if (API != null){
+		API.LMSSetValue('cmi.core.lesson_status', 'incomplete');
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSCommit('');
+	}
+}
+
+function SetScormComplete(){
+	if (API != null){
+		API.LMSSetValue('cmi.core.session_time', MillisecondsToTime((new Date()).getTime() - ScormStartTime));
+		API.LMSSetValue('cmi.core.lesson_status', 'completed');
+		SetScormScore();
+		API.LMSCommit('');
+		API.LMSFinish('');
+		ScormSubmitted = true;
+	}
+}
+
+var ScormStartTime = (new Date()).getTime();
+
+var SuspendData = '';
+
+function SetScormTimedOut(){
+	if (API != null){
+		if (ScormSubmitted == false){
+			SetScormScore();
+			API.LMSSetValue('cmi.core.exit', 'time-out'); 
+			API.LMSCommit('');
+			CheckLMSFinish();
+		}
+	}
+}
+
+//TIME RENDERING FUNCTION
+function MillisecondsToTime(Seconds){
+	Seconds = Math.round(Seconds/1000);
+	var S = Seconds % 60;
+	Seconds -= S;
+	if (S < 10){S = '0' + S;}
+	var M = (Seconds / 60) % 60;
+	if (M < 10){M = '0' + M;}
+	var H = Math.floor(Seconds / 3600);
+	if (H < 10){H = '0' + H;}
+	return H + ':' + M + ':' + S;
+}
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+//JCROSS-SPECIFIC SCORM-RELATED JAVASCRIPT CODE
+
+function SetScormScore(){
+//Reports the current score and any other information back to the LMS
+	if (API != null){
+		API.LMSSetValue('cmi.core.score.raw', Score);
+		
+//Now send a detailed reports on the item
+		var ItemLabel = 'Crossword';
+		API.LMSSetValue('cmi.objectives.0.id', 'obj'+ItemLabel);
+		API.LMSSetValue('cmi.interactions.0.id', 'int'+ItemLabel);
+		if (Finished == true){
+			API.LMSSetValue('cmi.objectives.0.status', 'completed');
+		}
+		else{
+			API.LMSSetValue('cmi.objectives.0.status', 'incomplete');
+		}		
+		API.LMSSetValue('cmi.objectives.0.score.min', '0');
+		API.LMSSetValue('cmi.objectives.0.score.max', '100');
+		API.LMSSetValue('cmi.objectives.0.score.raw', Score);
+//We're not sending any student response data, so we can set this to a non-standard value
+		API.LMSSetValue('cmi.interactions.0.type', 'crossword');
+		
+		API.LMSCommit('');
+	}
+}
+
+
+//JCROSS CORE JAVASCRIPT CODE
+
+var InGap = false;
+var CurrentBox = null;
+var Feedback = '';
+var AcrossCaption = '';
+var DownCaption = '';
+var Correct = '&#xC815;&#xB2F5;&#xC785;&#xB2C8;&#xB2E4;!';
+var Incorrect = '&#xD2C0;&#xB9B0; &#xB2F5;&#xC774; &#xC788;&#xC5B4;&#xC694;!'; 
+var GiveHint = '&#xB2E4;&#xC74C;&#xC5D0; &#xC62C; &#xBB38;&#xC790;&#xB294;';
+var YourScoreIs = '&#xC810;&#xC218;&#xB294; ';
+var BuiltGrid = '';
+var BuiltExercise = '';
+var Penalties = 0;
+var Score = 0;
+var InTextBox = false;
+var Locked = false;
+var TimeOver = false;
+var CaseSensitive = false; 
+
+var InputStuff = '<form method="post" action="" onsubmit="return false;"><span class="ClueNum">[strClueNum]: </span>';
+InputStuff += '[strClue] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
+InputStuff += '<button class="FuncButton" onclick="EnterGuess([strParams])">&#xC785;&#xB825;</button>';
+InputStuff += '<button class="FuncButton" onclick="ShowHint([strParams])">&#xD78C;&#xD2B8;</button>';
+InputStuff += '</form>';
+
+var CurrBoxElement = null;
+var Finished = false;
+
+function StartUp(){
+//Show a keypad if there is one	(added bugfix for 6.0.4.12)
+	if (document.getElementById('CharacterKeypad') != null){
+		document.getElementById('CharacterKeypad').style.display = 'block';
+	}
+
+	ScormStartUp();
+
+	
+	AcrossCaption = document.getElementById('CluesAcrossLabel').innerHTML;
+	DownCaption = document.getElementById('CluesDownLabel').innerHTML;
+
+
+
+
+
+
+}
+
+function GetAnswerLength(Across,x,y){
+	Result = 0;
+	if (Across == false){
+		while ((x<L.length)&&(L[x][y].length > 0)){
+			Result += L[x][y].length;
+			x++;
+		} 
+		return Result;
+	}
+	else{
+		while ((y<L[x].length)&&(L[x][y].length > 0)){
+			Result += L[x][y].length;
+			y++;
+		} 	
+		return Result;
+	}
+}
+
+function GetEditSize(Across,x,y){
+	var Len = GetAnswerLength(Across,x,y);
+	if (IsCJK(L[x][y].charCodeAt(0))){
+		Len *= 2;
+	}
+	return Len;
+}
+
+function ShowClue(ClueNum,x,y){
+	var Result = '';
+	var Temp;
+	var strParams;
+	var Clue = document.getElementById('Clue_A_' + ClueNum);
+	if (Clue != null){
+		Temp = InputStuff.replace(/\[ClueNum\]/g, ClueNum);
+		Temp = Temp.replace(/\[strClueNum\]/g, AcrossCaption + ' ' + ClueNum);
+		strParams = 'true,' + ClueNum + ',' + x + ',' + y + ',\'[strBoxId]\'';
+		Temp = Temp.replace(/\[strParams\]/g, strParams);
+		Temp = Temp.replace(/\[strBoxId\]/g, 'GA_' + ClueNum + '_' + x + '_' + y);
+		Temp = Temp.replace(/\[strEditSize\]/g, GetEditSize(true,x,y));
+		Temp = Temp.replace(/\[strMaxLength\]/g, GetAnswerLength(true,x,y));
+		Temp = Temp.replace(/\[strClue\]/g, Clue.innerHTML, Temp);
+		Result += Temp;
+	}
+	Clue = document.getElementById('Clue_D_' + ClueNum);
+	if (Clue != null){
+		Temp = InputStuff.replace(/\[ClueNum\]/g, ClueNum);
+		Temp = Temp.replace(/\[strClueNum\]/g, DownCaption + ' ' + ClueNum);
+		strParams = 'false,' + ClueNum + ',' + x + ',' + y + ',\'[strBoxId]\'';
+		Temp = Temp.replace(/\[strParams\]/g, strParams);
+		Temp = Temp.replace(/\[strBoxId\]/g, 'GD_' + ClueNum + '_' + x + '_' + y);
+		Temp = Temp.replace(/\[strEditSize\]/g, GetAnswerLength(false,x,y));
+		Temp = Temp.replace(/\[strClue\]/g, Clue.innerHTML, Temp);
+		Result += Temp;
+	}
+	document.getElementById('ClueEntry').innerHTML = Result;
+}
+
+function EnterGuess(Across,ClueNum,x,y,BoxId){
+	if (document.getElementById(BoxId) != null){
+		var Guess = document.getElementById(BoxId).value;
+		var AnsLength = GetAnswerLength(Across,x,y);
+		EnterAnswer(Guess,Across,AnsLength,x,y);
+	}
+}
+
+function SplitStringToPerceivedChars(InString, PC){
+	var Temp = InString.charAt(0);
+	if (InString.length > 1){
+		for (var i=1; i<InString.length; i++){
+			if (IsCombiningDiacritic(InString.charCodeAt(i)) == true){
+				Temp += InString.charAt(i);
+			}
+			else{
+				PC.push(Temp);
+				Temp = InString.charAt(i);
+			}
+		}
+	}
+	PC.push(Temp);
+}
+
+function EnterAnswer(Guess,Across,AnsLength,x,y){
+	var PC = new Array();
+	SplitStringToPerceivedChars(Guess, PC);
+	
+	var i=x;
+	var j=y;
+	var Letter = 0;
+	while (Letter < AnsLength){
+		if (Letter < PC.length){
+			G[i][j] = PC[Letter];
+			if (document.getElementById('L_' + i + '_' + j) != null){
+				document.getElementById('L_' + i + '_' + j).innerHTML = PC[Letter];
+			}
+		}
+		if (Across == true){
+			j++;
+		}
+		else{
+			i++;
+		}
+		Letter++;
+	}
+}
+
+function SetGridSquareValue(x,y,Val){
+	var GridId = 'L_' + x + '_' + y;
+	if (document.getElementById(GridId) != null){
+		document.getElementById(GridId).innerHTML = Val;
+	}
+}
+
+function ShowHint(Across,ClueNum,x,y,BoxId){
+	var i=x;
+	var j=y;
+	var LetterFromGuess = '';
+	var LetterFromKey = '';
+	var OutString = '';
+	if (Across==true){
+		while (j<L[i].length){
+			if (L[i][j] != ''){
+				OutString += L[i][j];
+				if (CaseSensitive == true){
+					LetterFromKey = L[i][j];
+					LetterFromGuess = G[i][j];
+				}
+				else {
+					LetterFromKey = L[i][j].toUpperCase();
+					LetterFromGuess = G[i][j].toUpperCase();
+				}
+				if (LetterFromGuess != LetterFromKey){
+//				if (G[i][j] != L[i][j]){
+					G[i][j] = L[i][j];
+					Penalties++;
+					break;
+				}
+			}
+			else{
+				break;
+			}
+		j++;
+		}
+	}
+	else{
+		while (i<L.length){
+			if (L[i][j] != ''){
+				OutString += L[i][j];
+				if (CaseSensitive == true){
+					LetterFromKey = L[i][j];
+					LetterFromGuess = G[i][j];
+				}
+				else {
+					LetterFromKey = L[i][j].toUpperCase();
+					LetterFromGuess = G[i][j].toUpperCase();
+				}
+				if (LetterFromGuess != LetterFromKey){
+//				if (G[i][j] != L[i][j]){
+					G[i][j] = L[i][j];
+					Penalties++;
+					break;
+				}
+			}
+			else{
+				break;
+			}
+		i++;
+		}
+	}
+	if (document.getElementById(BoxId) != null){
+		document.getElementById(BoxId).value = OutString;
+	}
+}
+
+L = new Array();
+L[0] = new Array('','','','','','','','','','','\uBCF8','','','','','','');
+L[1] = new Array('','','','','\uBB34','','','','\uB300','\uB9AC','\uC778','','','','','','');
+L[2] = new Array('','','','','\uAD6D','','\uC0AC','','','','\uBD80','\uCE59','','','','','');
+L[3] = new Array('','','','','\uC801','','\uC5C5','','','','\uB2F4','','','','','','');
+L[4] = new Array('','\uC218','\uAE09','\uAD8C','\uC790','','\uC18C','','','','\uC5F0','\uAE08','\uC6D0','\uBD80','','','');
+L[5] = new Array('','','','','','','\uB4DD','','\uCC28','\uC785','\uAE08','','','\uB3D9','','','');
+L[6] = new Array('','','','','','','','','','','\uBCF4','','\uCD9C','\uC0B0','\uD06C','\uB808','\uB527');
+L[7] = new Array('','\uACB0','','','','','','\uC0AC','\uD68C','\uBCF4','\uD5D8','','','\uC784','','','');
+L[8] = new Array('\uBCC4','\uC815','\uC6B0','\uCCB4','\uAD6D','','','\uD68C','','','\uB8CC','','','\uB300','\uC704','\uAD8C','');
+L[9] = new Array('','\uC8FC','','','\uBBFC','\uAC10','\uC815','\uBCF4','','','','','\uAC70','\uC18C','','','');
+L[10] = new Array('','\uBB38','','','\uC5F0','','','\uC7A5','','\uD6C4','','','','\uB4DD','','','');
+L[11] = new Array('','','\uBC18','\uB0A9','\uAE08','','','\uD611','','\uACAC','','','','','','','');
+L[12] = new Array('','','','','\uBC88','','\uD589','\uC815','\uACF5','\uC778','\uC778','\uC99D','\uC11C','','','','');
+L[13] = new Array('','','','\uAC1C','\uD638','','','','','','','','','','','','');
+
+
+CL = new Array();
+CL[0] = new Array(0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0);
+CL[1] = new Array(0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0);
+CL[2] = new Array(0,0,0,0,0,0,4,0,0,0,5,0,0,0,0,0,0);
+CL[3] = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+CL[4] = new Array(0,6,0,0,0,0,0,0,0,0,7,0,0,8,0,0,0);
+CL[5] = new Array(0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0);
+CL[6] = new Array(0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0);
+CL[7] = new Array(0,11,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0);
+CL[8] = new Array(13,0,0,0,14,0,0,0,0,0,0,0,0,15,0,0,0);
+CL[9] = new Array(0,0,0,0,16,0,0,0,0,0,0,0,17,0,0,0,0);
+CL[10] = new Array(0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0);
+CL[11] = new Array(0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+CL[12] = new Array(0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0);
+CL[13] = new Array(0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+
+G = new Array();
+G[0] = new Array('','','','','','','','','','','','','','','','','');
+G[1] = new Array('','','','','','','','','','','','','','','','','');
+G[2] = new Array('','','','','','','','','','','','','','','','','');
+G[3] = new Array('','','','','','','','','','','','','','','','','');
+G[4] = new Array('','','','','','','','','','','','','','','','','');
+G[5] = new Array('','','','','','','','','','','','','','','','','');
+G[6] = new Array('','','','','','','','','','','','','','','','','');
+G[7] = new Array('','','','','','','','','','','','','','','','','');
+G[8] = new Array('','','','','','','','','','','','','','','','','');
+G[9] = new Array('','','','','','','','','','','','','','','','','');
+G[10] = new Array('','','','','','','','','','','','','','','','','');
+G[11] = new Array('','','','','','','','','','','','','','','','','');
+G[12] = new Array('','','','','','','','','','','','','','','','','');
+G[13] = new Array('','','','','','','','','','','','','','','','','');
+
+
+function CheckAnswers(){
+	if (Locked == true){return;}
+
+	var AllCorrect = true;
+	var TotLetters = 0;
+	var CorrectLetters = 0;
+	var LetterFromKey = ''; 
+	var LetterFromGuess = '';
+	
+//Check each letter
+	for (var i=0; i<L.length; i++){
+		for (var j=0; j<L[i].length; j++){
+			if (L[i][j] != ''){
+				TotLetters++;
+				if (CaseSensitive == true) {
+					LetterFromKey = L[i][j];
+					LetterFromGuess = G[i][j];
+				}
+				else {
+					LetterFromKey = L[i][j].toUpperCase();
+					LetterFromGuess = G[i][j].toUpperCase();
+				}
+				if (LetterFromGuess != LetterFromKey){ 
+					G[i][j] = '';
+//Blank that square in the grid
+					SetGridSquareValue(i,j,'');
+					AllCorrect = false;
+				}
+				else{
+					CorrectLetters++;
+				}
+			}
+		}
+	}
+
+	Score = Math.floor(((CorrectLetters-Penalties) * 100)/TotLetters);
+	if (Score < 0){Score = 0;}
+	var Category = "연금" //문제별로 카테고리 작성
+	window.AndroidApp.receiveString(String(Score), Category)
+
+//Compile the output
+	var Output = '';
+
+	if (AllCorrect == true){
+		Output = Correct + '<br />';
+	}
+
+	Output += YourScoreIs + ' ' + Score + '%.<br />';
+	if (AllCorrect == false){
+		Output += Incorrect;
+		Penalties++;
+	}
+
+	ShowMessage(Output);
+	WriteToInstructions(Output);
+	
+	if ((AllCorrect == true)||(TimeOver == true)){
+
+
+		TimeOver = true;
+		Locked = true;
+		Finished = true;
+	}
+
+	if (AllCorrect == true){
+		SetScormComplete();
+	}
+	else{
+		SetScormIncomplete();
+	}
+
+}
+
+function TypeChars(Chars){
+	if (CurrentBox != null){
+		CurrentBox.value += Chars;
+	}
+}
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" onunload="CheckLMSFinish()">
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle"></h2>
+
+	<h3 class="ExerciseSubtitle">&#xC5F0;&#xAE08;</h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions">&#xB2E8;&#xC5B4;&#xB97C; &#xC785;&#xB825;&#xD55C; &#xD6C4; "&#xC815;&#xB2F5; &#xD655;&#xC778;"&#xC744; &#xD074;&#xB9AD;&#xD558;&#xC5EC; &#xB2F5;&#xC744; &#xD655;&#xC778;&#xD569;&#xB2C8;&#xB2E4;. &#xB9CC;&#xC57D; &#xC5EC;&#xB7EC;&#xBD84;&#xC774; &#xB9C9;&#xD614;&#xB2E4;&#xBA74;, "&#xD78C;&#xD2B8;"&#xC758; &#xB3C4;&#xC6C0;&#xC744; &#xBC1B;&#xC544;&#xBCF4;&#xC138;&#xC694;</div>
+</div>
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+
+
+
+<div id="ClueEntry">
+
+</div>
+
+<!-- This top button is hidden; uncomment it to reveal it. -->
+<!--
+<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()">&#160;&#xC815;&#xB2F5; &#xD655;&#xC778;&#160;</button>
+
+ -->
+ 
+<table class="CrosswordGrid">
+<tbody>
+
+<tr id="Row_0"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(1,0,10)">1</a><span class="NumLetterCellText" id="L_0_10" onclick="ShowClue(1,0,10)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_1"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(2,1,4)">2</a><span class="NumLetterCellText" id="L_1_4" onclick="ShowClue(2,1,4)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(3,1,8)">3</a><span class="NumLetterCellText" id="L_1_8" onclick="ShowClue(3,1,8)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_1_9">&#160;</span></td><td class="LetterOnlyCell"><span id="L_1_10">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_2"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_2_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(4,2,6)">4</a><span class="NumLetterCellText" id="L_2_6" onclick="ShowClue(4,2,6)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(5,2,10)">5</a><span class="NumLetterCellText" id="L_2_10" onclick="ShowClue(5,2,10)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_2_11">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_3"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_3_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_3_6">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_3_10">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_4"><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(6,4,1)">6</a><span class="NumLetterCellText" id="L_4_1" onclick="ShowClue(6,4,1)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_4_2">&#160;</span></td><td class="LetterOnlyCell"><span id="L_4_3">&#160;</span></td><td class="LetterOnlyCell"><span id="L_4_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_4_6">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(7,4,10)">7</a><span class="NumLetterCellText" id="L_4_10" onclick="ShowClue(7,4,10)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_4_11">&#160;</span></td><td class="LetterOnlyCell"><span id="L_4_12">&#160;</span></td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(8,4,13)">8</a><span class="NumLetterCellText" id="L_4_13" onclick="ShowClue(8,4,13)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_5"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_5_6">&#160;</span></td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(9,5,8)">9</a><span class="NumLetterCellText" id="L_5_8" onclick="ShowClue(9,5,8)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_5_9">&#160;</span></td><td class="LetterOnlyCell"><span id="L_5_10">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_5_13">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_6"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_6_10">&#160;</span></td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(10,6,12)">10</a><span class="NumLetterCellText" id="L_6_12" onclick="ShowClue(10,6,12)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_6_13">&#160;</span></td><td class="LetterOnlyCell"><span id="L_6_14">&#160;</span></td><td class="LetterOnlyCell"><span id="L_6_15">&#160;</span></td><td class="LetterOnlyCell"><span id="L_6_16">&#160;</span></td></tr><tr id="Row_7"><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(11,7,1)">11</a><span class="NumLetterCellText" id="L_7_1" onclick="ShowClue(11,7,1)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(12,7,7)">12</a><span class="NumLetterCellText" id="L_7_7" onclick="ShowClue(12,7,7)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_7_8">&#160;</span></td><td class="LetterOnlyCell"><span id="L_7_9">&#160;</span></td><td class="LetterOnlyCell"><span id="L_7_10">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_7_13">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_8"><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(13,8,0)">13</a><span class="NumLetterCellText" id="L_8_0" onclick="ShowClue(13,8,0)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_8_1">&#160;</span></td><td class="LetterOnlyCell"><span id="L_8_2">&#160;</span></td><td class="LetterOnlyCell"><span id="L_8_3">&#160;</span></td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(14,8,4)">14</a><span class="NumLetterCellText" id="L_8_4" onclick="ShowClue(14,8,4)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_8_7">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_8_10">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(15,8,13)">15</a><span class="NumLetterCellText" id="L_8_13" onclick="ShowClue(15,8,13)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_8_14">&#160;</span></td><td class="LetterOnlyCell"><span id="L_8_15">&#160;</span></td><td class="BlankCell">&#160;</td></tr><tr id="Row_9"><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_9_1">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(16,9,4)">16</a><span class="NumLetterCellText" id="L_9_4" onclick="ShowClue(16,9,4)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_9_5">&#160;</span></td><td class="LetterOnlyCell"><span id="L_9_6">&#160;</span></td><td class="LetterOnlyCell"><span id="L_9_7">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(17,9,12)">17</a><span class="NumLetterCellText" id="L_9_12" onclick="ShowClue(17,9,12)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_9_13">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_10"><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_10_1">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_10_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_10_7">&#160;</span></td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(18,10,9)">18</a><span class="NumLetterCellText" id="L_10_9" onclick="ShowClue(18,10,9)">&#160;&#160;&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_10_13">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_11"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(19,11,2)">19</a><span class="NumLetterCellText" id="L_11_2" onclick="ShowClue(19,11,2)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_11_3">&#160;</span></td><td class="LetterOnlyCell"><span id="L_11_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_11_7">&#160;</span></td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_11_9">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_12"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="LetterOnlyCell"><span id="L_12_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(20,12,6)">20</a><span class="NumLetterCellText" id="L_12_6" onclick="ShowClue(20,12,6)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_12_7">&#160;</span></td><td class="LetterOnlyCell"><span id="L_12_8">&#160;</span></td><td class="LetterOnlyCell"><span id="L_12_9">&#160;</span></td><td class="LetterOnlyCell"><span id="L_12_10">&#160;</span></td><td class="LetterOnlyCell"><span id="L_12_11">&#160;</span></td><td class="LetterOnlyCell"><span id="L_12_12">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr><tr id="Row_13"><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="NumLetterCell"><a href="javascript:void(0);" class="GridNum" onclick="ShowClue(21,13,3)">21</a><span class="NumLetterCellText" id="L_13_3" onclick="ShowClue(21,13,3)">&#160;&#160;&#160;</span></td><td class="LetterOnlyCell"><span id="L_13_4">&#160;</span></td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td><td class="BlankCell">&#160;</td></tr>
+
+</tbody>
+</table>
+
+<button id="CheckButton2" class="FuncButton" onclick="CheckAnswers()">&#160;&#xC815;&#xB2F5; &#xD655;&#xC778;&#160;</button>
+
+<table id="Clues" style="display: none;">
+<tbody>
+<tr>
+<td>
+
+<table class="ClueList">
+<tbody id="CluesAcross">
+<tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesAcrossLabel">&#xAC00;&#xB85C;:</h3></td></tr>
+
+<tr><td class="ClueNum">3. </td><td id="Clue_A_3" class="Clue">&#xB300;&#xB9AC;&#xAD8C;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC5B4; &#xB300;&#xB9AC;&#xB97C; &#xD560; &#xC218; &#xC788;&#xB294; &#xC9C0;&#xC704;&#xC5D0; &#xC788;&#xB294; &#xC0AC;&#xB78C;. &#xB300;&#xB9AC;&#xC778;&#xC758; &#xBC95;&#xB960;&#xD589;&#xC704;&#xB294; &#xBCF8;&#xC778;&#xC5D0;&#xAC8C; &#xBC95;&#xB960;&#xD6A8;&#xACFC;&#xAC00; &#xADC0; &#xC18D;&#xB41C;&#xB2E4;. &#xB300;&#xB9AC;&#xC778;&#xC740; &#xBCF8;&#xC778;&#xC758; &#xC704;&#xC784;&#xC744; &#xBC1B;&#xC9C0; &#xC54A;&#xACE0;&#xB3C4; &#xBC95;&#xB960;&#xC758; &#xADDC;&#xC815;&#xC5D0; &#xC758;&#xD558;&#xC5EC; &#xB2F9;&#xC5F0;&#xD788; &#xB300;&#xB9AC;&#xD560; &#xAD8C;&#xB9AC;&#xAC00; &#xC788;&#xB294; &#xBC95;&#xC815;&#xB300;&#xB9AC;&#xC778; (&#xCE5C;&#xAD8C;&#xC790;, &#xD6C4;&#xACAC;&#xC778; &#xB4F1;)&#xACFC; &#xBCF8;&#xC778;&#xC758; &#xC218;&#xAD8C;(&#x6388;&#x6B0A;)&#xD589;&#xC704;&#xC5D0; &#xC758;&#xD558;&#xC5EC; &#xB300;&#xB9AC;&#xAD8C;&#xC774; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC784;&#xC758;&#xB300;&#xB9AC;&#xC778;&#xC73C;&#xB85C; &#xAD6C;&#xBD84;&#xB41C;&#xB2E4;<br /></td></tr><tr><td class="ClueNum">5. </td><td id="Clue_A_5" class="Clue">&#xBC95;&#xB839;&#xB0B4;&#xC6A9; &#xC911; &#xBCF8;&#xCE59;&#xC5D0; &#xBD80;&#xC218;&#xD558;&#xC5EC; &#xADF8; &#xBC95;&#xB839;&#xC758; &#xC2DC;&#xD589;&#xC77C;&#xACFC; &#xADF8; &#xBC95;&#xB839;&#xC758; &#xC2DC;&#xD589;&#xC5D0; &#xB530;&#xB974;&#xB294; &#xACFC;&#xB3C4;&#xAE30;&#xC801;&#xC778; &#xC870;&#xCE58;, &#xBC95;&#xB839;&#xC758; &#xC2DC;&#xD589; &#xC5D0; &#xB530;&#xB77C; &#xD544;&#xC694;&#xD55C; &#xB2E4;&#xB978; &#xBC95;&#xB839;&#xC758; &#xAC1C;&#xC815;&#xC0AC;&#xD56D; &#xB4F1;&#xC744; &#xADDC;&#xC815;&#xD55C; &#xBD80;&#xBD84;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. &#xBAA8;&#xB4E0; &#xAC1C;&#xC815; &#xBC95;&#xB839;&#xC740; &#xBC95;&#xB839;&#xAC1C;&#xC815; &#xACFC;&#xC815;&#xC5D0;&#xC11C; &#xBC95; &#xB839;&#xC774; &#xBCC0;&#xB3D9;&#xB418;&#xB294; &#xC2DC;&#xC810;&#xC744; &#xBD84;&#xBA85;&#xD788; &#xD558;&#xACE0; &#xC885;&#xC804;&#xC758; &#xBC95;&#xB960;&#xAD00;&#xACC4;&#xC5D0;&#xC11C; &#xC0C8;&#xB85C;&#xC6B4; &#xBC95;&#xB960;&#xAD00;&#xACC4;&#xB85C; &#xC804;&#xD658;&#xB418;&#xB294; &#xACFC;&#xC815;&#xC774; &#xC21C;&#xC870;&#xB86D;&#xAC8C; &#xB418; &#xB3C4;&#xB85D; &#xD558;&#xB294; &#xC7A0;&#xC815;&#xC870;&#xCE58;&#xB098; &#xACBD;&#xACFC;&#xC801;&#xC778; &#xC870;&#xCE58; &#xAC19;&#xC740; &#xAC83;&#xC744; &#xADDC;&#xC815;&#xD558;&#xB294; &#xBD80;&#xCE59;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">6. </td><td id="Clue_A_6" class="Clue">&#x300C;&#xAD6D;&#xBBFC;&#xC5F0;&#xAE08;&#xBC95;&#x300D; &#xC81C;3&#xC870;&#xC81C;1&#xD56D; &#xC81C;15&#xD638;&#xC5D0; &#xC758;&#xD558;&#xBA74; &#xC218;&#xAE09;&#xAD8C;&#xC744; &#xAC00;&#xC9C4; &#xC790;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;. <br /></td></tr><tr><td class="ClueNum">7. </td><td id="Clue_A_7" class="Clue">&#x300C;&#xAD6D;&#xBBFC;&#xC5F0;&#xAE08;&#xBC95;&#x300D; &#xC81C;118&#xC870;&#xC5D0; &#xC758;&#xD574; &#xACF5;&#xB2E8;&#xC774; &#xC0AC;&#xC5C5;&#xC7A5;, &#xAC00;&#xC785;&#xC790; &#xBC0F; &#xAC00;&#xC785;&#xC790;&#xC600;&#xB358; &#xC790;, &#xC218;&#xAE09;&#xAD8C;&#xC790;&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xC801;&#xC0AC;&#xD56D;, &#xC790;&#xACA9;&#xC758; &#xCDE8;&#xB4DD; &#xBC0F; &#xC0C1;&#xC2E4;, &#xC5F0;&#xAE08;&#xBCF4;&#xD5D8;&#xB8CC;&#xC758; &#xB0A9;&#xBD80;, &#xAE09;&#xC5EC;&#xC758; &#xC9C0;&#xAE09;&#xC0C1;&#xD669; &#xB4F1;&#xC744; &#xAE30;&#xB85D;&#xD558;&#xC5EC; &#xBCF4;&#xAD00;&#xD558;&#xB294; &#xC6D0;&#xBD80;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">9. </td><td id="Clue_A_9" class="Clue">&#xAD6D;&#xBBFC;&#xC5F0;&#xAE08;&#xACF5;&#xB2E8; &#xC6B4;&#xC601;&#xC5D0; &#xC18C;&#xC694;&#xB418;&#xB294; &#xBE44;&#xC6A9;&#xC774; &#xBD80;&#xC871;&#xD560; &#xACBD;&#xC6B0; &#xAE30;&#xAE08;&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xC77C;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xCC28;&#xC785;&#xD558;&#xB294; &#xAE08;&#xC561;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;<br /></td></tr><tr><td class="ClueNum">10. </td><td id="Clue_A_10" class="Clue">&#xAE09;&#xC5EC;&#xC218;&#xAE09;&#xAD8C; &#xD655;&#xB300;&#xB97C; &#xD1B5;&#xD55C; &#xAD6D;&#xBBFC;&#xC5F0;&#xAE08; &#xC0AC;&#xAC01;&#xC9C0;&#xB300;&#xB97C; &#xCD95;&#xC18C;&#xD558;&#xB294; &#xD55C;&#xD3B8;, &#xACE0;&#xB839;&#xD654; &#xC0AC;&#xD68C;&#xC5D0; &#xB300;&#xBE44;&#xD558;&#xC5EC; &#xCD9C;&#xC0B0;&#xC744; &#xC7A5;&#xB824;&#xD558;&#xAE30; &#xC704;&#xD558;&#xC5EC; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xC81C;&#xB3C4;&#xC774;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">12. </td><td id="Clue_A_12" class="Clue">&#xD45C;&#xC900;&#xD654;&#xB41C; &#xC0C1;&#xAC70;&#xB798; &#xC11C;&#xC2DD; &#xB610;&#xB294; &#xACF5;&#xACF5;&#xC11C;&#xC2DD;&#xC744; &#xC11C;&#xB85C; &#xD569;&#xC758;&#xB41C; &#xD45C;&#xC900;&#xC5D0; &#xB530;&#xB77C; &#xC804;&#xC790;&#xBB38;&#xC11C;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xCEF4;&#xD4E8;&#xD130; &#xBC0F; &#xD1B5;&#xC2E0;&#xC744; &#xB9E4;&#xAC1C; &#xB85C; &#xC0C1;&#xD638; &#xAD50;&#xD658;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC774;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">13. </td><td id="Clue_A_13" class="Clue">&#xC0B0;&#xC5C5;&#xD1B5;&#xC0C1;&#xC790;&#xC6D0;&#xBD80;&#xC7A5;&#xAD00;&#xC758; &#xC9C0;&#xC815;&#xC744; &#xBC1B;&#xC544; &#xC790;&#xAE30;&#xC758; &#xBD80;&#xB2F4;&#xC73C;&#xB85C; &#xCCAD;&#xC0AC; &#xAE30;&#xD0C0; &#xC2DC;&#xC124;&#xC744; &#xAC16;&#xCD94;&#xACE0; &#xAD6D;&#xAC00;&#xB85C;&#xBD80;&#xD130; &#xC704;&#xC784;&#xBC1B;&#xC740; &#xCCB4;&#xC2E0;&#xC5C5; &#xBB34;&#xB97C; &#xC218;&#xD589;&#xD558;&#xB294; &#xC6B0;&#xCCB4;&#xAD6D;. &#x300C;&#xBCC4;&#xC815;&#xC6B0;&#xCCB4;&#xAD6D;&#xBC95;&#x300D;&#xC5D0; &#xB530;&#xB978; &#xC5F0;&#xAE08;&#xAC00;&#xC785;&#xC790; &#xB610;&#xB294; &#xC218;&#xAE09;&#xAD8C;&#xC790;&#xB294; &#xAD6D;&#xBBFC;&#xC5F0;&#xAE08; &#xB2F9;&#xC5F0;&#xAC00;&#xC785;&#xB300;&#xC0C1;&#xC5D0;&#xC11C; &#xC81C; &#xC678;&#xB41C;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">15. </td><td id="Clue_A_15" class="Clue">&#xC81C;3&#xC790; &#xB610;&#xB294; &#xACF5;&#xB3D9;&#xCC44;&#xBB34;&#xC790;&#xC911; 1&#xC778;&#xC774; &#xCC44;&#xBB34;&#xC790;&#xB97C; &#xC704;&#xD558;&#xC5EC;(&#xB300;&#xC2E0;&#xD558;&#xC5EC;) &#xBCC0;&#xC81C; &#xB610;&#xB294; &#xBCF4;&#xC0C1;&#xC744; &#xD55C; &#xACBD;&#xC6B0; &#xADF8; &#xBCC0;&#xC81C;&#xC790; &#xB610;&#xB294; &#xBCF4;&#xC0C1; &#xC744; &#xD55C; &#xC790;&#xAC00; &#xCC44;&#xBB34;&#xC790;&#xB97C; &#xC0C1;&#xB300;&#xB85C; &#xC9C1;&#xC811; &#xBCC0;&#xC81C;&#xAE08;&#xC561; &#xB610;&#xB294; &#xBCF4;&#xC0C1;&#xAE08;&#xC561;&#xC758; &#xC0C1;&#xD658;&#xC744; &#xCCAD;&#xAD6C;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD558;&#xB294; &#xAD8C;&#xB9AC;. &#xC2E4;&#xBB34;&#xC5D0;&#xC11C; &#xB294; &#xAD6C;&#xC0C1;&#xAD8C;&#xC774;&#xB77C;&#xB294; &#xC6A9;&#xC5B4;&#xB85C; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">16. </td><td id="Clue_A_16" class="Clue">&#xC0AC;&#xC0C1;&#x00B7;&#xC2E0;&#xB150;, &#xB178;&#xB3D9;&#xC870;&#xD569;&#x00B7;&#xC815;&#xB2F9;&#xC758; &#xAC00;&#xC785;&#x00B7;&#xD0C8;&#xD1F4;, &#xC815;&#xCE58;&#xC801; &#xACAC;&#xD574;, &#xAC74;&#xAC15;&#x00B7;&#xC131;&#xC0DD;&#xD65C;, &#xC720;&#xC804;&#xC815;&#xBCF4;, &#xBC94;&#xC8C4;&#xACBD;&#xB825;&#xC5D0; &#xAD00;&#xD55C; &#xC815;&#xBCF4;, &#xADF8; &#xBC16;&#xC5D0; &#xC0AC;&#xC0DD;&#xD65C;&#xC744; &#xD604;&#xC800;&#xD788; &#xCE68;&#xD574;&#xD560; &#xC6B0;&#xB824;&#xAC00; &#xC788;&#xB294; &#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;. &#xC774;&#xB4E4; &#xC815;&#xBCF4;&#xB294; &#xB2E4;&#xB978; &#xAC1C;&#xC778;&#xC815;&#xBCF4; &#xD56D;&#xBAA9;&#xACFC; &#xBE44;&#xAD50;&#xD558;&#xC5EC; &#xBCF4;&#xB2E4; &#xBBFC;&#xAC10;&#xD558;&#xC5EC; &#xCE68;&#xD574;&#xB098; &#xC720;&#xCD9C; &#xC2DC; &#xC815;&#xBCF4;&#xC8FC;&#xCCB4;&#xC758; &#xD504;&#xB77C;&#xC774;&#xBC84;&#xC2DC;&#xC5D0; &#xBCF4;&#xB2E4; &#xD070; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE60; &#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#x300C;&#xAC1C;&#xC778;&#xC815;&#xBCF4;&#xBCF4;&#xD638;&#xBC95;&#x300D; &#xC81C;23&#xC870;&#xC5D0; &#xB530;&#xB77C; &#xD574;&#xB2F9; &#xC815;&#xBCF4;&#xC5D0; &#xB300;&#xD55C; &#xCC98;&#xB9AC;&#xB294; &#xC6D0;&#xCE59;&#xC801;&#xC73C;&#xB85C; &#xAE08;&#xC9C0;&#xB418;&#xC9C0;&#xB9CC; &#xC815;&#xBCF4;&#xC8FC;&#xCCB4;&#xC758; &#xBCC4;&#xB3C4; &#xB3D9;&#xC758;&#xAC00; &#xC788;&#xB294; &#xACBD;&#xC6B0;, &#xB2E4;&#xB978; &#xBC95;&#xB960;&#xC5D0;&#xC11C; &#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xBBFC;&#xAC10;&#xC815;&#xBCF4; &#xCC98;&#xB9AC;&#xB97C; &#xC694;&#xAD6C;&#xD558;&#xAC70;&#xB098; &#xD5C8;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xC608;&#xC678;&#xC801;&#xC73C;&#xB85C; &#xAD00;&#xB828; &#xC815;&#xBCF4;&#xB97C; &#xCC98;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xB2E4;<br /></td></tr><tr><td class="ClueNum">17. </td><td id="Clue_A_17" class="Clue">&#xC0AC;&#xB78C;&#xC774; &#xC0C1;&#xB2F9;&#xD55C; &#xAE30;&#xAC04; &#xACC4;&#xC18D;&#xD558;&#xC5EC; &#xAC70;&#xC8FC;&#xD558;&#xB294; &#xC7A5;&#xC18C;&#xB85C;&#xC11C; &#xC8FC;&#xC18C;&#xC758; &#xC815;&#xB3C4;&#xC5D0; &#xC774;&#xB974;&#xC9C0; &#xC544;&#xB2C8;&#xD55C; &#xACF3;. <br /></td></tr><tr><td class="ClueNum">19. </td><td id="Clue_A_19" class="Clue">&#xBC18;&#xD658;&#xC77C;&#xC2DC;&#xAE08;&#xC744; &#xC9C0;&#xAE09;&#xBC1B;&#xC740; &#xC0AC;&#xB78C;&#xC774; &#xB2E4;&#xC2DC; &#xAC00;&#xC785;&#xC790; &#xC790;&#xACA9;&#xC744; &#xCDE8;&#xB4DD;&#xD55C; &#xB54C;&#xC5D0; &#xC774;&#xBBF8; &#xC9C0;&#xAE09;&#xBC1B;&#xC740; &#xBC18;&#xD658;&#xC77C;&#xC2DC;&#xAE08;&#xC5D0; &#xC18C;&#xC815;&#xC758; &#xC774;&#xC790;&#xB97C; &#xAC00;&#xC0B0;&#xD558;&#xC5EC; &#xB0A9;&#xBD80;&#xD558;&#xB294; &#xAE08;&#xC561;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.&#x00A0;<br /></td></tr><tr><td class="ClueNum">20. </td><td id="Clue_A_20" class="Clue">&#xD589;&#xC815;&#xC804;&#xC790;&#xC11C;&#xBA85;&#xC774; &#xC804;&#xC815;&#xD55C; &#xAC83;&#xC784;&#xC744; &#xD655;&#xC778;&#x00B7;&#xC99D;&#xBA85;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD558;&#xAE30; &#xC704;&#xD574; &#xD589;&#xC815;&#xAE30;&#xAD00;, &#xBCF4;&#xC870;&#xAE30;&#xAD00;, &#xBCF4;&#xC88C;&#xAE30;&#xAD00;, &#xC804;&#xC790;&#xBB38;&#xC11C;&#xC720;&#xD1B5; &#xBC0F; &#xD589;&#xC815;&#xC815;&#xBCF4; &#xACF5;&#xACF5;&#xC774;&#xC6A9;, &#xACF5;&#xACF5;&#xAE30;&#xBC18;, &#xC740;&#xD589; &#xB610;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xBC1C;&#xAE09;&#xD558;&#xB294; &#xC804;&#xC790;&#xC801; &#xC815;&#xBCF4;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;.&#x00A0;<br /></td></tr><tr><td class="ClueNum">21. </td><td id="Clue_A_21" class="Clue">&#xD53C;&#xD574;&#xC790;&#xAC00; &#xC911;&#xC0C1;&#xC744; &#xC785;&#xC5B4; &#xADF8; &#xCE58;&#xB8CC;&#xAE30;&#xAC04; &#xB3D9;&#xC548; &#xB610;&#xB294; &#xCE58;&#xB8CC;&#xAC00; &#xC885;&#xACB0;&#xB41C; &#xD6C4;&#xC5D0;&#xB3C4; &#xBD88;&#xCE58;&#xC758; &#xD6C4;&#xC720;&#xC7A5;&#xD574;&#xB85C; &#xC778;&#xD558;&#xC5EC; &#xC77C;&#xC815;&#xAE30;&#xAC04; &#xB610; &#xB294; &#xD3C9;&#xC0DD; &#xB3D9;&#xC548; &#xAE30;&#xBCF8;&#xC801;&#xC778; &#xC77C;&#xC0C1;&#xC0DD;&#xD65C;&#xC758; &#xB3D9;&#xC791;&#xC744; &#xD63C;&#xC790; &#xD798;&#xC73C;&#xB85C; &#xD558;&#xB294; &#xAC83;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD55C; &#xACBD;&#xC6B0; &#xC774;&#xB97C; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xD589;&#xC704;&#xB97C; &#xB9D0; &#xD558;&#xBA70; &#xAC1C;&#xD638;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xBE44;&#xC6A9;&#xC744; &#xAC1C;&#xD638;&#xBE44;&#xB77C;&#xACE0; &#xD558;&#xC5EC; &#xC801;&#xADF9;&#xC801; &#xC190;&#xD574;&#xB85C; &#xBCF4;&#xACE0; &#xC788;&#xB2E4;. &#xAC1C;&#xD638;&#xB294; &#xD53C;&#xD574;&#xC790;&#xAC00; &#xC785;&#xC6D0;&#xD574; &#xC788;&#xB294; &#xB3D9;&#xC548; &#xBCF4;&#xD638;&#xC790;&#xAC00; &#xBCF4;&#xC0B4;&#xD3B4;&#xC8FC;&#xB294; &#xC815;&#xB3C4;&#xC758; &#xAC04;&#xD638;, &#xAC04;&#xBCD1;&#xACFC;&#xB294; &#xAD6C;&#xBCC4;&#xB418;&#xB294; &#xAC1C;&#xB150;&#xC774;&#xB2E4;.<br /></td></tr>
+
+</tbody>
+</table>
+
+</td>
+
+<td>
+
+<table class="ClueList">
+<tbody id="CluesDown">
+<tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesDownLabel">&#xC138;&#xB85C;:</h3></td></tr>
+
+<tr><td class="ClueNum">1. </td><td id="Clue_D_1" class="Clue">&#xAD6D;&#xBBFC;&#xC5F0;&#xAE08;&#xBC95; &#xC81C;19&#xC870;&#xC758;2&#xC5D0; &#xC758;&#xD55C; &#xC2E4;&#xC5C5;&#xC5D0; &#xB300;&#xD55C; &#xAC00;&#xC785;&#xAE30;&#xAC04; &#xCD94;&#xAC00;&#xC0B0;&#xC785;(&#xC2E4;&#xC5C5;&#xD06C;&#xB808;&#xB527;&#xC81C;&#xB3C4;)&#xC740; &#xC5F0;&#xAE08;&#xBCF4;&#xD5D8;&#xB8CC;&#xC758; 75%&#xB9CC; &#xC9C0; &#xC6D0;&#xBC1B;&#xC73C;&#xBBC0;&#xB85C; &#xB098;&#xBA38;&#xC9C0; 25%&#xC758; &#xBCF8;&#xC778;&#xBD80;&#xB2F4; &#xC5F0;&#xAE08;&#xBCF4;&#xD5D8;&#xB8CC;&#xB97C; &#xB0A9;&#xBD80;&#xD558;&#xC5EC;&#xC57C; &#xAC00;&#xC785;&#xAE30;&#xAC04; &#xCD94;&#xAC00;&#xC0B0;&#xC785;&#xC758; &#xD61C;&#xD0DD;&#xC744; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;. &#xBCF8;&#xC778;&#xBD80;&#xB2F4; &#xC5F0;&#xAE08;&#xBCF4;&#xD5D8;&#xB8CC;&#xB294; &#xBBF8;&#xB0A9;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xC5F0;&#xCCB4;&#xAE08;&#xC740; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA70; &#xAC15;&#xC81C;&#xC9D5;&#xC218;&#xC758; &#xB300;&#xC0C1;&#xC774; &#xB418;&#xC9C0; &#xC54A;&#xC73C;&#xBA70; &#x300C;&#xAD6D;&#xBBFC;&#xC5F0; &#xAE08;&#xBC95;&#x300D; &#xC81C;115&#xC870;&#xC758; &#xC18C;&#xBA78;&#xC2DC;&#xD6A8; &#xADDC;&#xC815;&#xB3C4; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;. &#xB2E4;&#xB9CC; &#xBCF8;&#xC778;&#xBD80;&#xB2F4; &#xC5F0;&#xAE08;&#xBCF4;&#xD5D8;&#xB8CC;&#xC5D0;&#xB294; &#xAD6C;&#xC9C1;&#xAE09;&#xC5EC;&#xC885;&#xB8CC;&#xC77C;&#xB85C;&#xBD80;&#xD130; 3&#xAC1C;&#xC6D4;&#xAE4C;&#xC9C0; &#xB0A9;&#xBD80;&#xD560; &#xC218; &#xC788;&#xB294; &#xB0A9;&#xBD80;&#xC720;&#xD6A8;&#xAE30;&#xD55C;&#xB9CC;&#xC774; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">2. </td><td id="Clue_D_2" class="Clue">&#xC5B4;&#xB5A0;&#xD55C; &#xAD6D;&#xAC00;&#xC5D0; &#xC758;&#xD558;&#xC5EC;&#xB3C4; &#xADF8;&#xC758; &#xBC95;&#xB960;&#xC758; &#xC2DC;&#xD589; &#xC0C1; &#xAD6D;&#xBBFC;&#xC73C;&#xB85C; &#xAC04;&#xC8FC;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xC790;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;.&#x00A0;<br /></td></tr><tr><td class="ClueNum">4. </td><td id="Clue_D_4" class="Clue">&#xB0A9;&#xC138;&#xC758;&#xBB34;&#xC790;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xC0AC;&#xC5C5;&#xC790;&#xAC00; &#xADF8;&#xC5D0; &#xAD00;&#xACC4;&#xB41C; &#xC0AC;&#xC5C5;&#xB0B4;&#xC6A9;&#xC744; &#xAD00;&#xD560;&#xC138;&#xBB34;&#xAD00;&#xC11C;&#xC758; &#xB300;&#xC7A5;&#xC5D0; &#xB4F1;&#xB85D;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAD00;&#xD560; &#xC138; &#xBB34;&#xAD00;&#xC11C;&#xB294; &#xB0A9;&#xC138;&#xC758;&#xBB34;&#xAC00; &#xC5C6;&#xB294; &#xC790;&#xC5D0;&#xAC8C;&#xB3C4; &#x2018;&#xACE0;&#xC720;&#xBC88;&#xD638;&#x2019;&#xB97C; &#xBD80;&#xC5EC;&#xD558;&#xC5EC; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">8. </td><td id="Clue_D_8" class="Clue">&#xC608;&#xC804;&#xC5D0;&#xB294; &#xBD80;&#xB3D9;&#xC0B0; &#xB610;&#xB294; &#xBD80;&#xB3D9;&#xC0B0;&#xC0C1;&#xC758; &#xAD8C;&#xB9AC;&#xC758; &#xB300;&#xC5EC;&#xB85C; &#xC778;&#xD558;&#xC5EC; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC18C;&#xB4DD; &#xB4F1;&#xC73C;&#xB85C; &#xC815;&#xC758;&#xD558;&#xC5EC; &#xC0AC;&#xC5C5;&#xC18C;&#xB4DD;&#xACFC; &#xAD6C;&#xBD84; &#xD558;&#xC600;&#xC73C;&#xB098; 2010&#xB144;&#xBD80;&#xD130;&#xB294; &#xC0AC;&#xC5C5;&#xC18C;&#xB4DD;&#xC5D0; &#xD3EC;&#xD568;&#xD558;&#xACE0; &#xC788;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">11. </td><td id="Clue_D_11" class="Clue">&#xC2EC;&#xC0AC;&#xCCAD;&#xAD6C;&#xC5D0; &#xB300;&#xD55C; &#xACB0;&#xC815;&#xC744; &#xD560; &#xB54C; &#xADF8; &#xACB0;&#xB860;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBD80;&#xBD84;. &#xACB0;&#xC815;&#xC8FC;&#xBB38;&#xC758; &#xC720;&#xD615;&#xC73C;&#xB85C;&#xB294; &#xAC01;&#xD558;, &#xAE30;&#xAC01;, &#xC778;&#xC6A9;&#xC774; &#xC788;&#xB2E4;<br /></td></tr><tr><td class="ClueNum">12. </td><td id="Clue_D_12" class="Clue">&#xC0AC;&#xD68C;&#xBCF4;&#xC7A5;&#xC81C;&#xB3C4;&#xB97C; &#xC2DC;&#xD589;&#xD558;&#xACE0; &#xC788;&#xB294; &#xB2E4;&#xB978; &#xB098;&#xB77C;&#xC640; &#xC591;&#xAD6D; &#xAC04;&#xC758; &#xC5F0;&#xAE08;&#xC81C;&#xB3C4;&#xC758; &#xB2E4;&#xB978; &#xC810;&#xC744; &#xC0C1;&#xD638; &#xC870;&#xC815;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xC591;&#xAD6D; &#xAD6D;&#xBBFC; &#xC5D0;&#xAC8C; &#xC774;&#xC911;&#xAC00;&#xC785; &#xBA74;&#xC81C;, &#xAC00;&#xC785;&#xAE30;&#xAC04; &#xD569;&#xC0B0; &#xB4F1;&#xC758; &#xD61C;&#xD0DD;&#xC744; &#xC8FC;&#xAE30; &#xC704;&#xD558;&#xC5EC; &#xB9FA;&#xB294; &#xD611;&#xC815;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;. &#xC0AC;&#xD68C;&#xBCF4;&#xC7A5;&#xD611;&#xC815;&#xC740; &#xB300;&#xBD80;&#xBD84; &#xC591; &#xB2F9;&#xC0AC;&#xAD6D;&#xC758; &#xC815;&#xBD80; &#xAC04;&#xC5D0; &#xCCB4;&#xACB0;&#xB418;&#xACE0; &#xC788;&#xC73C;&#xBA70; &#xADF8; &#xD615;&#xD0DC;&#xB294; &#xD611;&#xC815;&#xC758; &#xC801;&#xC6A9;&#xBC94;&#xC704;&#xC5D0; &#xB530;&#xB77C; &#xD06C;&#xAC8C; &#x2018;&#xAC00;&#xC785;&#xAE30;&#xAC04; &#xD569;&#xC0B0; &#xD611;&#xC815;&#x2019;&#xACFC; &#x2018;&#xBCF4; &#xD5D8;&#xB8CC;&#xBA74;&#xC81C; &#xD611;&#xC815;&#x2019;&#xC73C;&#xB85C; &#xAD6C;&#xBD84;&#xB41C;&#xB2E4;. &#xC678;&#xAD6D;&#xC778;&#xC5D0; &#xB300;&#xD55C; &#xAD6D;&#xBBFC;&#xC5F0;&#xAE08; &#xAC00;&#xC785; &#xBC0F; &#xAE09;&#xC5EC;&#xC9C0;&#xAE09;&#xACFC; &#xAD00;&#xB828;&#xD574;&#xC11C;&#xB294; &#xC6D0;&#xCE59;&#xC801;&#xC73C;&#xB85C; &#xC0C1;&#xD638;&#xC8FC; &#xC758;&#xC5D0; &#xC758;&#xD558;&#xB3C4;&#xB85D; &#xB418;&#xC5B4; &#xC788;&#xC9C0;&#xB9CC; &#xC0AC;&#xD68C;&#xBCF4;&#xC7A5;&#xD611;&#xC815;&#xC774; &#xCCB4;&#xACB0;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xD611;&#xC815;&#xC774; &#xC6B0;&#xC120;&#xD558;&#xC5EC; &#xC801;&#xC6A9;&#xB41C;&#xB2E4;.<br /></td></tr><tr><td class="ClueNum">14. </td><td id="Clue_D_14" class="Clue">&#xAD6D;&#xBBFC;&#xC5F0;&#xAE08;&#xAC00;&#xC785;&#xC790;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xBC88;&#xD638;&#xB97C; &#xB9D0;&#xD558;&#xBA70;, &#xC8FC;&#xBBFC;&#xB4F1;&#xB85D;&#xBC88;&#xD638;, &#xAD6D;&#xB0B4;&#xAC70;&#xC18C;&#xC2E0;&#xACE0;&#xBC88;&#xD638;, &#xC678;&#xAD6D;&#xC778;&#xB4F1;&#xB85D;&#xBC88;&#xD638;<br /></td></tr><tr><td class="ClueNum">18. </td><td id="Clue_D_18" class="Clue">&#xBBF8;&#xC131;&#xB144;&#xC790; &#xB4F1; &#xBC95;&#xB960;&#xD589;&#xC704;&#xAC00; &#xC81C;&#xD55C;&#xB418;&#xB294; &#xC790;&#xB97C; &#xBCF4;&#xD638;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC81C;&#xB3C4;&#xB85C;&#xC11C; &#xD6C4;&#xACAC;&#xC778;&#xC740; &#xC774;&#xB4E4;&#xC758; &#xC7AC;&#xC0B0;&#xC744; &#xAD00;&#xB9AC;&#xD558;&#xACE0; &#xBC95;&#xB960;&#xD589;&#xC704;&#xB97C; &#xB300;&#xB9AC;&#xD55C;&#xB2E4;.&#x00A0;<br /></td></tr>
+
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
