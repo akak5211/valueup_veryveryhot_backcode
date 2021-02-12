@@ -1407,8 +1407,6 @@ function CheckAnswers(){
 	Score = Math.floor(((CorrectLetters-Penalties) * 100)/TotLetters);
 	if (Score < 0){Score = 0;}
 
-	var Category = "보험" //문제별로 카테고리 작성
-	window.AndroidApp.receiveString(String(Score), Category)
 
 //Compile the output
 	var Output = '';
@@ -1424,6 +1422,9 @@ function CheckAnswers(){
 	}
 
 	ShowMessage(Output);
+	var Category = "보험" //문제별로 카테고리 작성
+	window.AndroidApp.receiveString(String(Score), Category)
+
 	WriteToInstructions(Output);
 	
 	if ((AllCorrect == true)||(TimeOver == true)){
